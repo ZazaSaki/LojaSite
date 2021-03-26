@@ -18,3 +18,8 @@
     min-width: 100%;
     min-height: 300px;
       }
+
+.card {
+    padding: 10px;
+    margin : 10px
+}
