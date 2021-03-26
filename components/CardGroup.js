@@ -8,10 +8,10 @@ const ccc = [
     {title : "Apresentação 3",src : "/250x300.svg",  text : "Texto Publicitario aleatorio 3"}
 ]
 
-export default function CardGroup(){
+export default function CardGroup({List}){
     return (
         <div>
-            {ccc.map(card => (
+            {List.map(card => (
                 <Card title = {card.title} text = {card.text} src = {card.src} key = {card.title}/>
                 
             ))}
