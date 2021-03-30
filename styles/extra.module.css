@@ -1,3 +1,5 @@
+
+
 .crop {
     position: relative;
     width: 100%;
@@ -20,6 +22,16 @@
       }
 
 .card {
+    
+}
+
+.cardMobile {
     padding: 10px;
-    margin : 10px
+    margin : 10px;
+}
+
+.card img {
+    height : 100%;
+    max-width : 30%;
+    max-height : 300px;
 }

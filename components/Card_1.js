@@ -7,9 +7,6 @@ export default function Card({text, title, src}){
     return (
         <Media className = {card}>
             <img
-            width={250}
-            height={300}
-            className="mr-3"
             src={src}
             alt="Generic placeholder"
             />
