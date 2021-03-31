@@ -20,7 +20,7 @@ export default function test(){
     return(<div>
         <TopBar></TopBar>
         <FirtsPageCarousel></FirtsPageCarousel>
-        <CardGroup List = {CardList}></CardGroup>
+        <CardGroup List = {CardList} Card = {Card}></CardGroup>
         
     </div>);
 }
