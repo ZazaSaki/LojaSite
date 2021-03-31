@@ -6,11 +6,11 @@ export default function TopBar(req,res){
     return(
         <Navbar bg="light" expand="lg">
             <Image src = "/logo.png" width="75" height = "75"></Image>
-            <Navbar.Brand href="#home">Simple Pure</Navbar.Brand>
+            <Navbar.Brand href="/">Simple Pure</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
+                <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="#promo">Promoções</Nav.Link>
                 <Nav.Link href="/services">Serviços</Nav.Link>
                 <Nav.Link href="/products">Produtos</Nav.Link>

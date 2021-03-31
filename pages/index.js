@@ -16,7 +16,7 @@ const card = CardList[0];
 
 //<CardGroup List = {CardList}></CardGroup>
 
-export default function test(){
+export default function Home(){
     return(<div>
         <TopBar></TopBar>
         <FirtsPageCarousel></FirtsPageCarousel>
