@@ -13,7 +13,7 @@ export default function TopBar(req,res){
                 <Nav.Link href="#home">Home</Nav.Link>
                 <Nav.Link href="#promo">Promoções</Nav.Link>
                 <Nav.Link href="#services">Serviços</Nav.Link>
-                <Nav.Link href="#products">Produtos</Nav.Link>
+                <Nav.Link href="/products">Produtos</Nav.Link>
                 <Nav.Link href="#contacts">Contactos</Nav.Link>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
