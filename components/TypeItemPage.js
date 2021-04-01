@@ -8,8 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function TypeItemPage({CardList}){
     return(<div>
         <TopBar></TopBar>
-        <div class = {cardEnvelop}> 
-            <CardGroup class='container' List = {CardList} Card = {Card_2}></CardGroup>
+        <div className = {cardEnvelop}> 
+            <CardGroup className='container' List = {CardList} Card = {Card_2}></CardGroup>
         </div>
         
         

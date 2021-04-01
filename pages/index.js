@@ -13,7 +13,6 @@ const CardList = [
 ]
 
 const card = CardList[0];
-
 //<CardGroup List = {CardList}></CardGroup>
 
 export default function Home(){

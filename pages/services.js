@@ -11,8 +11,8 @@ const CardList = [
     {title : "Classe de Serviço 3",src : "/250x300.svg",  text : trashtext}
 ]
 
-//<CardGroup List = {CardList}></CardGroup>
+//<CardGroup List = {CardList}></CardGroup> 
 
-export default function products(){
+export default function products(){ 
     return(<TypeItemPage CardList={CardList}></TypeItemPage>);
 }

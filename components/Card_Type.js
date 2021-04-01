@@ -1,6 +1,9 @@
 import { Button, Card } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
+
 export default function Card_2({src, text, title, link}) {
     return(
         <Card style={{ width: '18rem', margin : '10px'}}>
