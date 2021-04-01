@@ -8,7 +8,7 @@ import { useState } from "react";
 
 //get data from server
 export async function getStaticProps(){
-    const res = await fetch('http://localhost:3000/api/hello');
+    const res = await fetch('https://simplepure.vercel.app/api/hello');
     const data = await res.json();
 
     return{
