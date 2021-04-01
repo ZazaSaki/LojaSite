@@ -1,0 +1,55 @@
+
+  
+  .quadro
+  {	
+      width: 7.6cm;
+      height : 6cm;
+      background-color:rgb(255, 255, 255);
+      border : 3px groove;
+      border-color: white;
+      border-radius: 15px;
+      overflow:hidden;
+  }
+  
+  .name{
+      text-align: left;
+      color : rgb(0, 0, 0);
+      border-bottom : 1px groove;
+      border-color: white;
+      vertical-align:top;
+  }
+  
+  .price{
+      text-align: right;
+      color : rgb(0, 0, 0);
+      vertical-align: bottom;
+      border-bottom : 1px groove;
+      border-color: rgb(0, 0, 0);
+      vertical-align:top;
+  }
+  
+.table{
+      width : 100%; 
+      border-radius: 15px;
+      vertical-align: bottom;
+      
+  }
+  
+.td{
+      border-bottom : 1px groove;
+      border-color: white;
+      vertical-align:top;
+  }
+  
+  
+  .h3 {
+      height: 10px;
+      width:auto;
+      margin: 20px;
+      text-align:right;
+      vertical-align:center;
+  }
+  
+  .logo{
+      height: 75px;
+   }
