@@ -4,10 +4,11 @@ import Etiqueta from '../components/Etiqueta';
 import TopBar from '../components/TopBar';
 import { Button, FormControl, InputGroup } from "react-bootstrap";
 import Card from '../components/Card_1';
+import { useState } from "react";
 
 //get data from server
 export async function getStaticProps(){
-    const res = await fetch('https://simplepure.vercel.app/api/hello');
+    const res = await fetch('http://localhost:3000/api/hello');
     const data = await res.json();
 
     return{
@@ -39,19 +40,23 @@ function deleteCard(id){
 
 export default function products({data}){
     
-    const list = data.slice(0,3);
+    const [search, setSearch] = useState("");
+    const [cardId, setCardId] = useState("");
+
+    const list = data[0];
     console.log(data);
     return(<div>
         <InputGroup>
         <InputGroup.Prepend>
-            <InputGroup.Text>Procurar</InputGroup.Text>
+            <InputGroup.Text>Procurar {search}</InputGroup.Text>
         </InputGroup.Prepend>
-        <FormControl aria-describedby="basic-addon1" />
+        <FormControl aria-describedby="basic-addon1" onChange= {(e)=>setSearch(e.target.value)}/>
         <InputGroup.Prepend>
         <Button variant="outline-secondary">Nova Etiqueta</Button>
         <Button variant="outline-secondary">Apagar Etiqueta</Button>
         </InputGroup.Prepend>
         </InputGroup>
-            <Etiqueta List={list}></Etiqueta>
+            <Button><Etiqueta List={list}></Etiqueta></Button>
+            
         </div>);
 }
