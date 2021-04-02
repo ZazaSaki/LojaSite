@@ -25,7 +25,7 @@ export default (req, res) => {
 
   do {
     
-    List.push({id:cell('A'), name: cell('C'), family : cell('B'), price : cell('L')+"€"});
+    List.push({id:cell('A'), name: cell('C'), family : cell('B'), price : cell('L').toFixed(2)+"€"});
     i = i+1;
   } while (cell('A'));
 
