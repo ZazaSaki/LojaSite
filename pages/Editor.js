@@ -50,11 +50,12 @@ export default function products({data}){
     }
 
     function newProduct(product){
+        setSearch("");
         if (!CardList[cardId]) {
             return;
         }
         CardList[cardId].list.push(product);
-
+        
         update();
     }
     function popProduct() {
