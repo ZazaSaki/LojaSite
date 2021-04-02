@@ -47,8 +47,9 @@
       height: 10px;
       width:auto;
       margin: 20px;
-      text-align:right;
+      text-align:center;
       vertical-align:center;
+      font-family: 'Times New Roman', Times, serif;
       color: black;
       font-weight: 670;
   }
