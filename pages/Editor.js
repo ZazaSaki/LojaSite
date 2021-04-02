@@ -43,7 +43,15 @@ export default function products({data}){
     const [search, setSearch] = useState("");
     const [cardId, setCardId] = useState("");
 
-    const list = data[0];
+    function getList(){
+        if (!data || !data[0]) {
+            return [1,2,3];
+        }
+
+        return data;
+    }
+
+    const list = getList().slice(0,3);
     console.log(data);
     return(<div>
         <InputGroup>
