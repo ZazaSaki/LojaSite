@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import { Button, FormControl, InputGroup, Overlay } from "react-bootstrap";
 import Etiqueta from '../components/Editor/Etiqueta';
-import SearchList from '../components/SearchList/searchList';
+import SearchList from '../components/SearchList/SearchList';
 
 
 //get data from server
