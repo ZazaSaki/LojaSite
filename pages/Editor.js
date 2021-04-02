@@ -24,6 +24,8 @@ export async function getStaticProps(){
 
 export default function products({data}){
     
+    const [test, setTest] = useState(0);
+    
     const [search, setSearch] = useState("");
     const [cardId, setCardId] = useState(0);
 
@@ -34,18 +36,34 @@ export default function products({data}){
         setCardList([...CardList,{list:[]}]);
     }
 
-    function newProduct(product){
-        CardList[cardId].list.push(product);
+    function deleteCard(){
+        deleteAnyCard(cardId);
     }
 
-    function deleteCard(){
-        const l1 = CardList.slice(0,cardId);
-        const l2 = CardList.slice(cardId + 1, CardList.length);
+    function deleteAnyCard(id){
+        const l1 = CardList.slice(0,id);
+        const l2 = CardList.slice(id + 1, CardList.length);
         
         setCardList([...l1, ...l2]);
     }
 
-    function mapCardList(){
+    function newProduct(product){
+        if (!CardList[cardId]) {
+            return;
+        }
+        CardList[cardId].list.push(product);
+    }
+    function popProduct() {
+        if (!CardList[cardId]) {
+            return;
+        }
+        CardList[cardId].list.pop();
+        newCard();
+        deleteAnyCard(CardList.length);
+
+    }
+
+    function showCardList(){
         let i = 0;
         const t = CardList.map((card)=>{
             const index = i++;
@@ -78,9 +96,11 @@ export default function products({data}){
             <InputGroup.Prepend>
                 <Button variant="outline-secondary" onClick={()=>{newCard()}}>Nova Etiqueta</Button>
                 <Button variant="outline-secondary" onClick={()=>{deleteCard()}}>Apagar Etiqueta</Button>
+                <Button variant="outline-secondary" onClick={()=>{newProduct(data[test]); setTest(test+1)}}>Novo Produto</Button>
+                <Button variant="outline-secondary" onClick={()=>{popProduct()}}>Apagar Produto</Button>
             </InputGroup.Prepend>
             
         </InputGroup>
-            {mapCardList()}     
+            {showCardList()}     
         </div>);
 }
