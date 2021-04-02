@@ -5,9 +5,9 @@ import {quadro, logo, name, price, table, td, h3} from "../../styles/etiqueta.mo
 export default function Etiqueta({List, title}){
 
     function getTitle(){
-        
-        
+        //validating title
         if (!title) {
+            //validating list
             if(!List || !List[0]){
                 return "no List";
             }
@@ -18,6 +18,7 @@ export default function Etiqueta({List, title}){
     }
 
     function getList(){
+        //validating list
         if (!List || !List[0]) {
             return [];
         }
