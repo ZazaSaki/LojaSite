@@ -81,7 +81,7 @@ export default function products({data}){
     }
 
     function searchList(){
-        const list = data.filter((product)=>(product.name.toLowerCase().includes(search.toLowerCase())));
+        const list = data.filter((product)=>(product.name.toLowerCase().includes(search.trim().toLowerCase())));
         return(<SearchList list={list} action={newProduct} active={search.length>0}></SearchList>);
     }
 
