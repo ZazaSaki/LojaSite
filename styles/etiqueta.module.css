@@ -5,17 +5,19 @@
       width: 7.6cm;
       height : 6cm;
       background-color:rgb(255, 255, 255);
-      border : 3px groove;
+      border : 5px solid;
       border-color: white;
       border-radius: 15px;
       overflow:hidden;
+      font-weight: 650;
+      font-size:large;
   }
   
   .name{
       text-align: left;
       color : rgb(0, 0, 0);
-      border-bottom : 1px groove;
-      border-color: white;
+      border-bottom : 2px groove;
+      border-color: rgb(0, 0, 0);
       vertical-align:top;
   }
   
@@ -23,9 +25,9 @@
       text-align: right;
       color : rgb(0, 0, 0);
       vertical-align: bottom;
-      border-bottom : 1px groove;
+      border-bottom : 3px solid;
       border-color: rgb(0, 0, 0);
-      vertical-align:top;
+      vertical-align:bottom;
   }
   
 .table{
@@ -36,8 +38,8 @@
   }
   
 .td{
-      border-bottom : 1px groove;
-      border-color: white;
+      border-bottom : 3px solid;
+      border-color: rgb(0, 0, 0);
       vertical-align:top;
   }
   
@@ -49,6 +51,7 @@
       text-align:right;
       vertical-align:center;
       color: black;
+      font-weight: 670;
   }
   
   .logo{
