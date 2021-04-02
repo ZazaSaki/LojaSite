@@ -6,10 +6,10 @@ export default function Etiqueta({List, title}){
 
     function getTitle(){
         if (!title) {
-            if(!List){
-                return " ";
+            if(!List || !List[0]){
+                return "no List";
             }
-
+            
             return List[0].family;
         }
 
@@ -17,7 +17,7 @@ export default function Etiqueta({List, title}){
     }
 
     function getList(){
-        if (!List) {
+        if (!List || !List[0]) {
             return [];
         }
 
