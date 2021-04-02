@@ -112,7 +112,6 @@ export default function products({data}){
                 <InputGroup.Prepend>
                     <Button variant="outline-secondary" onClick={()=>{newCard()}}>Nova Etiqueta</Button>
                     <Button variant="outline-secondary" onClick={()=>{deleteCard()}}>Apagar Etiqueta</Button>
-                    <Button variant="outline-secondary" onClick={()=>{newProduct(data[test]); setTest(test+1)}}>Novo Produto</Button>
                     <Button variant="outline-secondary" onClick={()=>{popProduct()}}>Apagar Produto</Button>
                 </InputGroup.Prepend>
             </InputGroup>
