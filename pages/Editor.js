@@ -1,10 +1,13 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';  
-import Etiqueta from '../components/Editor/Etiqueta';
-import TopBar from '../components/TopBar';
-import { Button, FormControl, InputGroup } from "react-bootstrap";
-import Card from '../components/Card_1';
+import {search as searchClass} from "../styles/etiqueta.module.css";
 import { useState } from "react";
+
+import { Button, FormControl, InputGroup, Overlay } from "react-bootstrap";
+import Etiqueta from '../components/Editor/Etiqueta';
+import SearchItem from '../components/SearchItem';
+import SearchList from '../components/seachList/searchList';
+
 
 //get data from server
 export async function getStaticProps(){
@@ -52,15 +55,20 @@ export default function products({data}){
             return;
         }
         CardList[cardId].list.push(product);
+
+        update();
     }
     function popProduct() {
         if (!CardList[cardId]) {
             return;
         }
         CardList[cardId].list.pop();
+        update();
+    }
+
+    function update(){
         newCard();
         deleteAnyCard(CardList.length);
-
     }
 
     function showCardList(){
@@ -72,6 +80,13 @@ export default function products({data}){
 
         return t;
     }
+
+    function searchList(){
+        const list = data.filter((product)=>(product.name.toLowerCase().includes(search.toLowerCase())));
+        return(<SearchList list={list} action={newProduct} active={search.length>0}></SearchList>);
+    }
+
+
 
     //cleaning data
     function getList(){
@@ -86,21 +101,26 @@ export default function products({data}){
     const list = getList().slice(0,3);
     //console.log(data);
     return(<div>
-        <InputGroup>
-            <InputGroup.Prepend>
-                <InputGroup.Text>Procurar {cardId+1}</InputGroup.Text>
-            </InputGroup.Prepend>
-            
-            <FormControl aria-describedby="basic-addon1" onChange= {(e)=>setSearch(e.target.value)}/>
-            
-            <InputGroup.Prepend>
-                <Button variant="outline-secondary" onClick={()=>{newCard()}}>Nova Etiqueta</Button>
-                <Button variant="outline-secondary" onClick={()=>{deleteCard()}}>Apagar Etiqueta</Button>
-                <Button variant="outline-secondary" onClick={()=>{newProduct(data[test]); setTest(test+1)}}>Novo Produto</Button>
-                <Button variant="outline-secondary" onClick={()=>{popProduct()}}>Apagar Produto</Button>
-            </InputGroup.Prepend>
-            
-        </InputGroup>
-            {showCardList()}     
+        <div>
+            <InputGroup>
+                <InputGroup.Prepend>
+                    <InputGroup.Text>Procurar</InputGroup.Text>
+                </InputGroup.Prepend>
+                
+                <FormControl aria-describedby="basic-addon1" onChange= {(e)=>setSearch(e.target.value)}/>
+                
+                <InputGroup.Prepend>
+                    <Button variant="outline-secondary" onClick={()=>{newCard()}}>Nova Etiqueta</Button>
+                    <Button variant="outline-secondary" onClick={()=>{deleteCard()}}>Apagar Etiqueta</Button>
+                    <Button variant="outline-secondary" onClick={()=>{newProduct(data[test]); setTest(test+1)}}>Novo Produto</Button>
+                    <Button variant="outline-secondary" onClick={()=>{popProduct()}}>Apagar Produto</Button>
+                </InputGroup.Prepend>
+            </InputGroup>
+            {searchList()}
+        </div>
+        
+        <div>
+            {showCardList()}  
+        </div>   
         </div>);
 }
