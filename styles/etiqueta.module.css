@@ -54,3 +54,12 @@
   .logo{
       height: 75px;
    }
+
+   .search{
+       height: 200px;
+       width: 60%;
+       background-color: rgb(253, 183, 137);
+       overflow: scroll;
+       position: fixed;
+       
+   }

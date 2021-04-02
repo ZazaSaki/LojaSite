@@ -10,7 +10,7 @@ export default function SearchList({list, action, active}){
     return (
         
                 <ListGroup className={searchClass} style={dd}>
-                    {list.map((product)=>(<SearchItem product={product} selfAdd={action}></SearchItem>))}
+                    {list.map((product)=>(<SearchItem product={product} selfAdd={action} key={product.name}></SearchItem>))}
                 </ListGroup>
         
         );
