@@ -1,6 +1,6 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';  
-import Etiqueta from '../components/Etiqueta';
+import Etiqueta from '../components/Editor/Etiqueta';
 import TopBar from '../components/TopBar';
 import { Button, FormControl, InputGroup } from "react-bootstrap";
 import Card from '../components/Card_1';
@@ -41,7 +41,7 @@ function deleteCard(id){
 export default function products({data}){
     
     const [search, setSearch] = useState("");
-    const [cardId, setCardId] = useState("");
+    const [cardId, setCardId] = useState(0);
 
     function getList(){
         if (!data || !data[0]) {
@@ -52,19 +52,22 @@ export default function products({data}){
     }
 
     const list = getList().slice(0,3);
-    console.log(data);
+    //console.log(data);
     return(<div>
         <InputGroup>
-        <InputGroup.Prepend>
-            <InputGroup.Text>Procurar {search}</InputGroup.Text>
-        </InputGroup.Prepend>
-        <FormControl aria-describedby="basic-addon1" onChange= {(e)=>setSearch(e.target.value)}/>
-        <InputGroup.Prepend>
-        <Button variant="outline-secondary">Nova Etiqueta</Button>
-        <Button variant="outline-secondary">Apagar Etiqueta</Button>
-        </InputGroup.Prepend>
+            <InputGroup.Prepend>
+                <InputGroup.Text>Procurar {search}</InputGroup.Text>
+            </InputGroup.Prepend>
+            
+            <FormControl aria-describedby="basic-addon1" onChange= {(e)=>setSearch(e.target.value)}/>
+            
+            <InputGroup.Prepend>
+                <Button variant="outline-secondary">Nova Etiqueta</Button>
+                <Button variant="outline-secondary">Apagar Etiqueta</Button>
+            </InputGroup.Prepend>
         </InputGroup>
-            <Button><Etiqueta List={list}></Etiqueta></Button>
+        
+        <Button><Etiqueta List={list}></Etiqueta></Button>
             
         </div>);
 }
