@@ -36,7 +36,7 @@ export default class products extends Component{
     }
 
     deleteCard = () => {
-        deleteAnyCard(this.state.cardId);
+       this.deleteAnyCard(this.state.cardId);
     }
 
     deleteAnyCard = (id)=> {
