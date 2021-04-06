@@ -30,10 +30,9 @@ export default class products extends Component{
     setCardId= (state) => {this.setState({cardId : state})};
 
     //setting up Cardlist logic
-    setCardList = (state) => {this.setState({CardList: state})};
 
     newCard = () => {
-        this.setCardList([...this.state.CardList,{list:[]}]);
+        this.props.setCardList([...this.props.CardList,{list:[]}]);
     }
 
     deleteCard = () => {
@@ -41,32 +40,32 @@ export default class products extends Component{
     }
 
     deleteAnyCard = (id)=> {
-        const l1 = this.state.CardList.slice(0,id);
-        const l2 = this.state.CardList.slice(id + 1, this.state.CardList.length);
+        const l1 = this.props.CardList.slice(0,id);
+        const l2 = this.props.CardList.slice(id + 1, this.props.CardList.length);
         
-        this.setCardList([...l1, ...l2]);
+        this.props.setCardList([...l1, ...l2]);
     }
 
     newProduct = (product)=>{
         this.setSearch("");
-        if (!this.state.CardList[this.state.cardId]) {
+        if (!this.props.CardList[this.state.cardId]) {
             return;
         }
-        this.state.CardList[this.state.cardId].list.push(product);
+        this.props.CardList[this.state.cardId].list.push(product);
         
         this.update();
     }
     popProduct = ()=>{
-        if (!this.state.CardList[this.state.cardId]) {
+        if (!this.props.CardList[this.state.cardId]) {
             return;
         }
-        this.state.CardList[this.state.cardId].list.pop();
+        this.props.CardList[this.state.cardId].list.pop();
         this.update();
     }
 
     update= ()=>{
-        newCard();
-        deleteAnyCard(this.state.CardList.length);
+        this.newCard();
+        this.deleteAnyCard(this.props.CardList.length);
     }
 
     searchList = () => {
@@ -120,8 +119,8 @@ export default class products extends Component{
            
         </div>
         
-        <div id="print">
-            <CardListComp CardList={this.state.CardList} setCardId={this.setCardId}></CardListComp> 
+        <div id="print" style = {{width: "20cm"}}>
+            <CardListComp CardList={this.props.CardList} setCardId={this.setCardId}></CardListComp> 
         </div>   
         </div>);
         }
