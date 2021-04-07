@@ -11,17 +11,17 @@ import CardListComp from '../CardList/CardList';
 
 export default class products extends Component{
 
-    state = {
-        test : null,
-        search : "",
-        cardId : 0,
-        CardList : [],
-        data : [],
-    };
 
-    constructor(){
-        super();
-        this.setState({data : []});
+    constructor(props){
+        super(props);
+        this.state = {
+            test : null,
+            search : "",
+            cardId : 0,
+            CardList : [],
+            data : [],
+            file:null
+        };
     }
     
     setTest = (state) => {this.setState({test: state})};
@@ -87,12 +87,16 @@ export default class products extends Component{
         
     }
 
+    divWidth = ()=>{
+        return this.props.printing ? {width: "20cm"} : {width: "20cm"}; 
+    }
     
     //console.log(data);
     render(){ 
         console.log(this.props.data);
         return(<div>
         <div>
+        {this.searchList()}
             <InputGroup>
                 <InputGroup.Prepend>
                     <InputGroup.Text>Procurar {this.state.test}</InputGroup.Text>
@@ -107,19 +111,21 @@ export default class products extends Component{
                     <Button variant="outline-secondary" onClick={()=>{this.print()}}>Imprimir</Button>
                     
                 </InputGroup.Prepend>
-                <Form.File onChange={(e)=>{this.setTest(e.target.value)}}  id="formcheck-api-custom" custom>
-                    <Form.File.Input isValid />
+                <Form.File id="formcheck-api-custom" custom>
+                    <Form.File.Input isValid type="file" onChange={(e)=>{this.setState({file : e.target.files[0]});console.log(e.target.files[0]);}}/>
                     <Form.File.Label data-browse="Button text">
                         Custom file input
                     </Form.File.Label>
                     <Form.Control.Feedback type="valid">You did it!</Form.Control.Feedback>
                 </Form.File>
             </InputGroup>
-            {this.searchList()}
+            
            
         </div>
+
         
-        <div id="print" style = {{width: "20cm"}}>
+        
+        <div className="print" style = {this.divWidth()}>
             <CardListComp CardList={this.props.CardList} setCardId={this.setCardId}></CardListComp> 
         </div>   
         </div>);
