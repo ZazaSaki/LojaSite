@@ -5,6 +5,7 @@ import React, { useState , useRef, Component} from "react";
 import { Button, FormControl, InputGroup, Form } from "react-bootstrap";
 import SearchList from '../SearchList/SearchList';
 import CardListComp from '../CardList/CardList';
+import FileReader from '../FileReader/FileReader';
 
 
 
@@ -20,7 +21,8 @@ export default class products extends Component{
             cardId : 0,
             CardList : [],
             data : [],
-            file:null
+            file : null,
+            printing : false,
         };
     }
     
@@ -88,7 +90,7 @@ export default class products extends Component{
     }
 
     divWidth = ()=>{
-        return this.props.printing ? {width: "20cm"} : {width: "20cm"}; 
+        return this.state.printing ? {width: "20cm"} : {width: "20cm"}; 
     }
     
     //console.log(data);
@@ -119,6 +121,8 @@ export default class products extends Component{
                     <Form.Control.Feedback type="valid">You did it!</Form.Control.Feedback>
                 </Form.File>
             </InputGroup>
+
+            <FileReader file={this.state.file}></FileReader>
             
            
         </div>
