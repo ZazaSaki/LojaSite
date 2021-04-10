@@ -9,23 +9,27 @@ import CardListComp from '../components/CardList/CardList';
 
 export async function getStaticProps(){
     const res = await fetch('https://simplepure.vercel.app/api/hello');
-    const data = await res.json();
-
-    return{
+    try {
+      const data = await res.json();
+      return{
         props : {data: data}
+      }
+    } catch (error) {
+      const data = [];
+      return{
+        props : {data: data}
+      }
     }
+    
+    
 }
 
 export default function products({data}){
     
     const [CardList, setCardList] = useState([]);
+   
     const componentRef = useRef();
-
     
-
-    function print(){
-        return <CardListComp CardList={CardList} setCardId={()=>(0)}></CardListComp> ;
-    }
   return (
     <div>
       <ReactToPrint
