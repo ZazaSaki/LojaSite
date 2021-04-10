@@ -8,7 +8,7 @@ import fs from 'fs';
 export default (req, res) => {
   //const List = readExcel('./public/exelTest.xlsx');
   
-  const data = fs.readFileSync('./dataBase.json');
+  const data = fs.readFileSync('../dataBase.json');
 
   const {List} = JSON.parse(data); 
 
