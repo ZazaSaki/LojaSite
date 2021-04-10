@@ -71,7 +71,8 @@ export default class products extends Component{
     }
 
     searchList = () => {
-        const list = this.props.data.filter((product)=>(product.name.toLowerCase().includes(this.state.search.trim().toLowerCase())));
+        const mappedlist = this.props.data.map(({id, name, family, price})=>({id, name : family + " " + name, family, price}));
+        const list = mappedlist.filter((product)=>(product.name.toLowerCase().includes(this.state.search.trim().toLowerCase())));
         return(<SearchList list={list} action={this.newProduct} active={this.state.search.length>0}></SearchList>);
     }
 
@@ -90,15 +91,18 @@ export default class products extends Component{
     }
 
     divWidth = ()=>{
-        return this.state.printing ? {width: "20cm"} : {width: "20cm"}; 
+        return this.state.printing ? {width: "20cm"} : {width: "100%"}; 
     }
     
+    print = ()=>{
+        this.setState({printing : !this.state.printing});
+    }
+
     //console.log(data);
     render(){ 
         console.log(this.props.data);
         return(<div>
         <div>
-        {this.searchList()}
             <InputGroup>
                 <InputGroup.Prepend>
                     <InputGroup.Text>Procurar {this.state.test}</InputGroup.Text>
@@ -110,7 +114,7 @@ export default class products extends Component{
                     <Button variant="outline-secondary" onClick={()=>{this.newCard()}}>Nova Etiqueta</Button>
                     <Button variant="outline-secondary" onClick={()=>{this.deleteCard()}}>Apagar Etiqueta</Button>
                     <Button variant="outline-secondary" onClick={()=>{this.popProduct()}}>Apagar Produto</Button>
-                    <Button variant="outline-secondary" onClick={()=>{this.print()}}>Imprimir</Button>
+                    <Button variant="outline-secondary" onClick={()=>{this.print()}}>Orientação</Button>
                     
                 </InputGroup.Prepend>
                 <Form.File id="formcheck-api-custom" custom>
@@ -126,7 +130,7 @@ export default class products extends Component{
             
            
         </div>
-
+        {this.searchList()}
         
         
         <div className="print" style = {this.divWidth()}>
