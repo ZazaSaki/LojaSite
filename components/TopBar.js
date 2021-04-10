@@ -6,7 +6,7 @@ export default function TopBar(req,res){
     return(
         <Navbar bg="light" expand="lg">
             <Image src = "/logo.png" width="75" height = "75"></Image>
-            <Navbar.Brand href="/">Simple Pure</Navbar.Brand>
+            <Navbar.Brand href="/">Simple Pure (site em desenvolvimento)</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
