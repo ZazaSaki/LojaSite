@@ -71,8 +71,7 @@ export default class products extends Component{
     }
 
     searchList = () => {
-        const mappedlist = this.props.data.map(({id, name, family, price})=>({id, name : family + " " + name, family, price}));
-        const list = mappedlist.filter((product)=>(product.name.toLowerCase().includes(this.state.search.trim().toLowerCase())));
+        const list = this.props.data.filter(({name, family})=>(name.toLowerCase().includes(this.state.search.trim().toLowerCase())));
         return(<SearchList list={list} action={this.newProduct} active={this.state.search.length>0}></SearchList>);
     }
 
