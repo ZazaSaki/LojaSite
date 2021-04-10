@@ -1,5 +1,4 @@
 import xlsx from 'xlsx';
-import fs from 'fs';
 import path from "path";
 
 const dirRelativeToPublicFolder = 'exelTest.xlsx';
@@ -32,14 +31,6 @@ export function readExcel(dir) {
         List.push({id:cell('A'), name: cell('C'), family : cell('B'), price : cell('L').toFixed(2)+"€"});
         i = i+1;
     } while (cell('A'));
-
-    //const images = filenames.map(name => path.join('/', dirRelativeToPublicFolder, name))
-    const data = JSON.stringify({
-        total : List.length,
-        List
-    })
-
-    fs.writeFileSync("./public/dataBase.json", data);
 
     return List;
 }
