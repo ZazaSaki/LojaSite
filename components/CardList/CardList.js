@@ -16,8 +16,8 @@ export default function CardListComp({CardList, setCardId, Num, toImpress}){
     let TempList = [];
 
     function hidden(val) {
-        console.log({val, Num, ret :(Num==0)? false : val == parseInt(Num)});
-        return (CardList.length < groupSize+1)? false : val == parseInt(Num);
+        console.log({val, Num, ret :(Num==0)? false : val != parseInt(Num)});
+        return (CardList.length < groupSize+1)? false : val != parseInt(Num);
     }
     
     function showCardListEditor(){
@@ -52,12 +52,9 @@ export default function CardListComp({CardList, setCardId, Num, toImpress}){
         const final = list.map(({group, hidden}, mainIndex)=>{
             let mainCounter = 0;
             console.log({hidden, mainIndex});
-            return(<div key = {"group" + mainCounter} hidden={hidden}>
+            return(<div key = {"group" + mainIndex} hidden={hidden}>
                 {group.map((card)=>{
-                    const index = i++;
-                    if((i-1)%6==0 && i-1>0) mainCounter++;
-                    console.log({mainCounter});
-                    console.log({i});
+                    
                     return (card) })}
             </div>)
         });
