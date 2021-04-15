@@ -8,7 +8,7 @@ import CardListComp from '../components/CardList/CardList';
 
 
 export async function getStaticProps(){
-    const res = await fetch('https://simplepure.vercel.app/api/hello');
+  const res = await fetch('http://simplepure.vercel.app/api/hello');
     try {
       const data = await res.json();
       return{

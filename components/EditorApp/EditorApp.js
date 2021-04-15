@@ -6,6 +6,7 @@ import { Button, FormControl, InputGroup, Form } from "react-bootstrap";
 import SearchList from '../SearchList/SearchList';
 import CardListComp from '../CardList/CardList';
 import FileReader from '../FileReader/FileReader';
+import CheckBoxGroup from "../checkBoxGroup/checkBoxGroup";
 
 
 
@@ -23,14 +24,19 @@ export default class products extends Component{
             data : [],
             file : null,
             printing : false,
+            numOfBox : 0,
         };
     }
+
+    
     
     setTest = (state) => {this.setState({test: state})};
     
     setSearch = (state) => {this.setState({search: state})};
     setCardId= (state) => {this.setState({cardId : state})};
 
+    setNumOfBoxes = (state) => {this.setState({numOfBoxes : state})};
+    groupSize = 6;
     //setting up Cardlist logic
 
     newCard = () => {
@@ -131,9 +137,9 @@ export default class products extends Component{
         </div>
         {this.searchList()}
         
-        
+        <CheckBoxGroup setVal={(v)=>(this.setState({numOfBox :v}))} numOfBoxes={parseInt(this.props.CardList.length/this.groupSize,10)+parseInt((this.props.CardList.length%this.groupSize + this.groupSize - 1)/this.groupSize)}></CheckBoxGroup>
         <div className="print" style = {this.divWidth()}>
-            <CardListComp CardList={this.props.CardList} setCardId={this.setCardId}></CardListComp> 
+            <CardListComp toImpress={this.state.printing} CardList={this.props.CardList} setCardId={this.setCardId} Num={this.state.numOfBox}></CardListComp> 
         </div>   
         </div>);
         }
