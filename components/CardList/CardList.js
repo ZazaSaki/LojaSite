@@ -16,11 +16,8 @@ export default function CardListComp({CardList, setCardId, Num, toImpress}){
     let TempList = [];
 
     function hidden(val) {
-        console.log({toImpress});
-        console.log({Num});
-        console.log({val});
-        console.log({ret : (toImpress)? false : val != parseInt(Num)});
-        return (!toImpress)? false : val == parseInt(Num);
+        console.log({val, Num, ret :(Num==0)? false : val == parseInt(Num)});
+        return (CardList.length < groupSize+1)? false : val == parseInt(Num);
     }
     
     function showCardListEditor(){
@@ -33,11 +30,11 @@ export default function CardListComp({CardList, setCardId, Num, toImpress}){
         let i = 0;
         
         //spliting list
-        CardList.map((card)=>{
+        CardList.map((card,mainIndex)=>{
             
             const index = i++;
-
-            TempList.push(<Button onClick={()=>{setCardId(index);}} key={i} ><Etiqueta List={card.list}></Etiqueta></Button>);
+            console.log({mainIndex});
+            TempList.push(<Button onClick={()=>{setCardId(mainIndex)}} key={i} ><Etiqueta List={card.list}></Etiqueta></Button>);
 
             //checking groupSize = is the group full?
             if (index%groupSize == groupSize-1 || CardList.length-1 == index) {
@@ -52,15 +49,16 @@ export default function CardListComp({CardList, setCardId, Num, toImpress}){
         i = 0
 
         //generating jsx
-        const final = list.map(({group, hidden})=>{
+        const final = list.map(({group, hidden}, mainIndex)=>{
             let mainCounter = 0;
+            console.log({hidden, mainIndex});
             return(<div key = {"group" + mainCounter} hidden={hidden}>
                 {group.map((card)=>{
                     const index = i++;
                     if((i-1)%6==0 && i-1>0) mainCounter++;
                     console.log({mainCounter});
                     console.log({i});
-                    return(<Button onClick={()=>{setCardId(index);}} key={"card" + index} ><Etiqueta List={card.list}></Etiqueta></Button>)})}
+                    return (card) })}
             </div>)
         });
 
@@ -71,5 +69,5 @@ export default function CardListComp({CardList, setCardId, Num, toImpress}){
 
     
 
-    return (!toImpress) ? showCardListEditor() : showCardList();
+    return showCardList();
 }
