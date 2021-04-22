@@ -3,7 +3,10 @@ import { Media } from 'react-bootstrap';
 import {card} from "../styles/extra.module.css";
 
 
-export default function Card({text, title, src}){
+export default function Card({item}){
+    
+    const {text, title, src} = item;
+    
     return (
         <Media className = {card}>
             <img

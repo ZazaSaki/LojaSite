@@ -38,7 +38,6 @@ export async function getStaticProps(){
 export default function products({data}){
     const CardList = data;
     const [type, setType] = useState('');
-    console.log(CardList);
 
     function bt(){
       if (type!='') {
@@ -47,10 +46,11 @@ export default function products({data}){
     }
 
     function decide(){
+        const DysplayList = CardList.filter((card)=>(card.family==type)).map(product => ({title : product.name, text: product.price}));
         if (type!='') {
             return(
                 <div className = {cardEnvelop}> 
-                    <CardGroup className='container' List = {CardList.filter((card)=>(card.family==type))} Card = {Card_2}></CardGroup>
+                    <CardGroup className='container' List = {DysplayList} Card = {Card_2}></CardGroup>
                 </div>
             );
         }
@@ -58,7 +58,7 @@ export default function products({data}){
         return <TypeItemPage CardList={CardList} action={setType}></TypeItemPage>;
     }
 
-    
+    console.log(CardList[0]);
 
     return(<div>
             <TopBar></TopBar>

@@ -5,9 +5,8 @@ export default function CardGroup({List, Card, action}){
     
     return (
         <div className='row'>
-            {List.map(card => (
-                <Card title = {card.family} text = {card.name} src = {card.src} action={()=>(action(card.Type))} key = {card.title}/>
-                
+            {List.map((card,index) => (
+                <Card item={card}  action={()=>(action(card.Type))} key = {index}/>
             ))}
         </div>
       );

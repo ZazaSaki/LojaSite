@@ -4,7 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-export default function Card_2({src, text, title, action}) {
+export default function Card_2({item, action}) {
+    const {src, text, title} = item;
+    
     return(
         <Card style={{ width: '18rem', margin : '10px'}}>
             <Card.Img variant="top" src={src} style={{width : '100%', height : '250px'}}/>
