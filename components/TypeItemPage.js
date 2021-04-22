@@ -5,11 +5,23 @@ import {cardEnvelop} from "../styles/extra.module.css";
 import 'bootstrap/dist/css/bootstrap.min.css';  
 
 
-export default function TypeItemPage({CardList}){
+export default function TypeItemPage({CardList, action}){
+    let temp = [];
+
+    const List = CardList.map((card)=>{
+        if (!temp.includes(card.family)) {
+            temp.push(card.family);
+            console.log(card.family);
+            const family = card.family ? card.family : 'Outros';
+            return {family, src:''};
+        }
+    }).filter((card)=>(card));
+
+    console.log({List});
+    
     return(<div>
-        <TopBar></TopBar>
         <div className = {cardEnvelop}> 
-            <CardGroup className='container' List = {CardList} Card = {Card_2}></CardGroup>
+            <CardGroup className='container' List = {List} Card = {Card_2} action={action}></CardGroup>
         </div>
         
         

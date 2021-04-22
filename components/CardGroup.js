@@ -1,11 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-export default function CardGroup({List, Card}){
+export default function CardGroup({List, Card, action}){
+    
     return (
         <div className='row'>
             {List.map(card => (
-                <Card title = {card.title} text = {card.text} src = {card.src} link={card.link} key = {card.title}/>
+                <Card title = {card.family} text = {card.name} src = {card.src} action={()=>(action(card.Type))} key = {card.title}/>
                 
             ))}
         </div>
