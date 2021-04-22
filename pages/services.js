@@ -1,5 +1,6 @@
 import TypeItemPage from "../components/TypeItemPage";
 import 'bootstrap/dist/css/bootstrap.min.css';  
+import TopBar from "../components/TopBar";
 
 
 
@@ -14,5 +15,9 @@ const CardList = [
 //<CardGroup List = {CardList}></CardGroup> 
 
 export default function products(){ 
-    return(<TypeItemPage CardList={CardList}></TypeItemPage>);
+    return(<div>
+        <TopBar></TopBar>
+        <TypeItemPage CardList={CardList}></TypeItemPage>
+        </div>
+        );
 }
