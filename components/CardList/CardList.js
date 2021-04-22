@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import Etiqueta from "../Editor/Etiqueta";
 
-
+// Editor card List
 export default function CardListComp({CardList, setCardId, Num, toImpress}){
     
     //List params
