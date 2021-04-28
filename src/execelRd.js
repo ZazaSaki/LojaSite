@@ -1,7 +1,6 @@
 import xlsx from 'xlsx';
 import path from "path";
 import fs from 'fs';
-import { listenerCount } from 'events';
 
 const dirRelativeToPublicFolder = 'exelTest.xlsx';
 const dirRelativeToPublicFolderD = 'exelTest.xlsx';
