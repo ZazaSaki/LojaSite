@@ -11,7 +11,7 @@ function jsWritter(List) {
         List
     })
 
-    fs.writeFileSync("./public/dataBase.json", data);
+    fs.writeFileSync("/temp/dataBase.json", data);
 
 }
 
