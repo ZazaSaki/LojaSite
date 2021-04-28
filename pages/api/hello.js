@@ -1,12 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { GenerateDataBase } from "../../src/execelRd";
+import { GenerateDataBase, readExcel } from "../../src/execelRd";
 //import jsWritter from "../../src/fileJsWriter";
 import fs from 'fs';
 import path from 'path';
 
 
 export default (req, res) => {
-  GenerateDataBase();
+  //GenerateDataBase();
   const dirRelativeToPublicFolder = 'dataBase.json';
 
   const dir = path.resolve('./public', dirRelativeToPublicFolder);
