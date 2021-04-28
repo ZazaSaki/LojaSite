@@ -22,7 +22,9 @@ export default (req, res) => {
   const dir = path.resolve('./public', dirRelativeToPublicFolder);
   const data = fs.readFileSync('./public/dataBase.json');
 
-  const {List: rawList} = JSON.parse(data);
+  //const {List: rawList} = JSON.parse(data);
+
+  const rawList  = readExcel();
   
   const List = rawList.map(({id, name, family,price})=>(
     {id,
