@@ -1,10 +1,12 @@
 import xlsx from 'xlsx';
 import path from "path";
+import fs from 'fs';
+import { listenerCount } from 'events';
 
 const dirRelativeToPublicFolder = 'exelTest.xlsx';
 const dirRelativeToPublicFolderD = 'exelTest.xlsx';
 
-//const dir = path.resolve('./public', dirRelativeToPublicFolder);
+const dir = path.resolve('./public', dirRelativeToPublicFolder);
 
 export function writeExcel() {
     //const wb = xlsx.
@@ -33,5 +35,17 @@ export function readExcel(dir) {
     } while (cell('A'));
 
     return List;
+}
+
+function saveJSON(file) {
+    const dir = path.resolve('./public', dirRelativeToPublicFolder);
+    const data = fs.writeFileSync('./public/dataBase.json', file);
+
+}
+
+export function GenerateDataBase() {
+    const List = readExcel(dir);
+
+    saveJSON(JSON.stringify({List}));
 }
 
