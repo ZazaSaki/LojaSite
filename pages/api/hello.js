@@ -42,7 +42,7 @@ function readExcel() {
 }
 
 export default (req, res) => {
-  jsWritter(readExcel());
+  //jsWritter(readExcel());
   const dirRelativeToPublicFolder = 'dataBase.json';
 
   const dir = path.resolve('./public', dirRelativeToPublicFolder);
