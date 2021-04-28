@@ -3,6 +3,7 @@ import {readExcel } from "../../src/execelRd";
 //import jsWritter from "../../src/fileJsWriter";
 
 import fs from "fs";
+import path from "path";
 function jsWritter(List) {
     //const images = filenames.map(name => path.join('/', dirRelativeToPublicFolder, name))
     const data = JSON.stringify({
