@@ -11,7 +11,7 @@ export function writeExcel() {
     //const wb = xlsx.
 }
 
-export function readExcel(dir) {
+export function readExcel() {
     
 
     const wb = xlsx.readFile(dir);

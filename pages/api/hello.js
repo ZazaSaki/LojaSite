@@ -1,12 +1,21 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { GenerateDataBase, readExcel } from "../../src/execelRd";
+import {readExcel } from "../../src/execelRd";
 //import jsWritter from "../../src/fileJsWriter";
-import fs from 'fs';
-import path from 'path';
 
+import fs from "fs";
+function jsWritter(List) {
+    //const images = filenames.map(name => path.join('/', dirRelativeToPublicFolder, name))
+    const data = JSON.stringify({
+        total : List.length,
+        List
+    })
+
+    fs.writeFileSync("./public/dataBase.json", data);
+
+}
 
 export default (req, res) => {
-  //GenerateDataBase();
+  jsWritter(readExcel());
   const dirRelativeToPublicFolder = 'dataBase.json';
 
   const dir = path.resolve('./public', dirRelativeToPublicFolder);

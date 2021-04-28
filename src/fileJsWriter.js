@@ -1,4 +1,4 @@
-import fs from "fs";
+//import fs from "fs";
 export default function jsWritter(List) {
     //const images = filenames.map(name => path.join('/', dirRelativeToPublicFolder, name))
     const data = JSON.stringify({
@@ -6,6 +6,6 @@ export default function jsWritter(List) {
         List
     })
 
-    fs.writeFileSync("./public/dataBase.json", data);
+    //fs.writeFileSync("./public/dataBase.json", data);
 
 }
