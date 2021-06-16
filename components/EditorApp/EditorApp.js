@@ -103,11 +103,8 @@ export default class products extends Component{
         this.setState({printing : !this.state.printing});
     }
 
-    //console.log(data);
-    render(){ 
-        console.log(this.props.data);
-        return(<div>
-        <div>
+    topbarMenu = () =>{
+        return(
             <InputGroup>
                 <InputGroup.Prepend>
                     <InputGroup.Text>Procurar {this.state.test}</InputGroup.Text>
@@ -129,11 +126,19 @@ export default class products extends Component{
                     </Form.File.Label>
                     <Form.Control.Feedback type="valid">You did it!</Form.Control.Feedback>
                 </Form.File>
-            </InputGroup>
+            </InputGroup>);
 
-            <FileReader file={this.state.file}></FileReader>
             
-           
+    }
+
+    //console.log(data);
+    render(){ 
+        console.log(this.props.data);
+        return(<div>
+        <div>
+            {this.topbarMenu()}
+            
+           <FileReader file={this.state.file}></FileReader>
         </div>
         {this.searchList()}
         
