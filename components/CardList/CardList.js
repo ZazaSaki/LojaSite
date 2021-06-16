@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import Etiqueta from "../Editor/Etiqueta";
 
 // Editor card List
-export default function CardListComp({CardList, setCardId, Num, toImpress}){
+export default function CardListComp({CardList, setCardId, Num, toImpress, currentId}){
     
     //List params
     const groupSize = 6;
@@ -23,7 +23,7 @@ export default function CardListComp({CardList, setCardId, Num, toImpress}){
     function showCardListEditor(){
         
         return CardList.map((card, index)=>
-            (<Button onClick={()=>{setCardId(index);}} key={index} ><Etiqueta List={card.list}></Etiqueta></Button>))
+            (<Button variant={()=>((currentId==index)? "success":"danger")} onClick={()=>{setCardId(index);}} key={index} ><Etiqueta List={card.list}></Etiqueta></Button>))
     }
 
     function showCardList(){
@@ -34,7 +34,7 @@ export default function CardListComp({CardList, setCardId, Num, toImpress}){
             
             const index = i++;
             console.log({mainIndex});
-            TempList.push(<Button onClick={()=>{setCardId(mainIndex)}} key={i} ><Etiqueta List={card.list}></Etiqueta></Button>);
+            TempList.push(<Button variant={(currentId==mainIndex)? "danger":"primary"} onClick={()=>{setCardId(mainIndex);}} key={i} ><Etiqueta List={card.list}></Etiqueta></Button>);
 
             //checking groupSize = is the group full?
             if (index%groupSize == groupSize-1 || CardList.length-1 == index) {
