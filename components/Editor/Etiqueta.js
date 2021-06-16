@@ -46,7 +46,7 @@ export default function Etiqueta({List, title}){
                 {getList().map(product => (
                     <tr key = {product.name}>
                         <td className = {name}>{product.name}</td>
-                        <td className = {price}>{product.price}</td>
+                        <td className = {price}><input style = {{border : "0px", width : "55px", fontWeight : "bold"}}defaultValue = {product.price}/></td>
                     </tr>
                 ))}
                 
