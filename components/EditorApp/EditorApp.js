@@ -144,7 +144,7 @@ export default class products extends Component{
         
         <CheckBoxGroup setVal={(v)=>(this.setState({numOfBox :v}))} numOfBoxes={parseInt(this.props.CardList.length/this.groupSize,10)+parseInt((this.props.CardList.length%this.groupSize + this.groupSize - 1)/this.groupSize)}></CheckBoxGroup>
         <div className="print" style = {this.divWidth()}>
-            <CardListComp toImpress={this.state.printing} CardList={this.props.CardList} setCardId={this.setCardId} Num={this.state.numOfBox}></CardListComp> 
+            <CardListComp toImpress={this.state.printing} CardList={this.props.CardList} setCardId={this.setCardId} Num={this.state.numOfBox} currentId = {this.state.cardId}></CardListComp> 
         </div>   
         </div>);
         }
