@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import xlsx from 'xlsx';
 //import jsWritter from "../../src/fileJsWriter";
+import {readExcel, GenerateDataBase} from "../../src/execelRd";
 
 function jsWritter(List) {
     //const images = filenames.map(name => path.join('/', dirRelativeToPublicFolder, name))
@@ -15,7 +16,7 @@ function jsWritter(List) {
 
 }
 
-//*
+/*
 //convert the excel sheet in a json format
 function readExcel() {
   const dirRelativeToPublicFolder = 'exelTest.xlsx';
@@ -63,10 +64,11 @@ export default (req, res) => {
   //jsWritter(readExcel());
   const dirRelativeToPublicFolder = 'dataBase.json';
 
-  const dir = path.resolve('./public', dirRelativeToPublicFolder);
-  const data = fs.readFileSync('./public/dataBase.json');
+  const dir = path.resolve('./data', dirRelativeToPublicFolder);
+  const data = fs.readFileSync('./data/dataBase.json');
 
-  const rawList  = readExcel();
+  const rawList  = GenerateDataBase()
+  //readExcel();
   
   const List = rawList.map(({id, name, family,price})=>(
     {id,

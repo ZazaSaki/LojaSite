@@ -1,16 +1,18 @@
 import xlsx from 'xlsx';
 import path from "path";
-import writer from './fileJsWriter';
+import jsWriter from './fileJsWriter';
 
 const dirRelativeToPublicFolder = 'exelTest.xlsx';
 const dirRelativeToPublicFolderD = 'exelTest.xlsx';
 
-const dir = path.resolve('./public', dirRelativeToPublicFolder);
+const dir = path.resolve('./data', dirRelativeToPublicFolder);
 
 export function writeExcel() {
     //const wb = xlsx.
 }
 
+
+//read the excelFile and returns a json fromated List
 export function readExcel() {
     
 
@@ -36,9 +38,11 @@ export function readExcel() {
     return List;
 }
 
+
 export function GenerateDataBase() {
     const List = readExcel(dir);
 
-    writer(List);
+    jsWriter(List);
+    return List;
 }
 
