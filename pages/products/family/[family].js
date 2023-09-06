@@ -4,15 +4,15 @@ import { useRouter } from "next/router";
 import {NavLink} from "react-bootstrap";
 
 
-import TypeItemPage from "../../components/TypeItemPage";
+import TypeItemPage from "../../../components/TypeItemPage";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import { useState } from "react";
-import TopBar from "../../components/TopBar";
-import {cardEnvelop} from "../../styles/extra.module.css";
-import CardGroup from "../../components/CardGroup";
-import Card_2 from "../../components/Card_Type";
+import TopBar from "../../../components/TopBar";
+import {cardEnvelop} from "../../../styles/extra.module.css";
+import CardGroup from "../../../components/CardGroup";
+import Card_2 from "../../../components/Card_Type";
 import { Button } from "react-bootstrap";
-import cleanData from "../../src/ProductsUtils";
+import cleanData from "../../../src/ProductsUtils";
 
 
 const trashtext = "Simple sentence ta do effectssssss with impact a little bit bit bit ";
