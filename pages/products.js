@@ -5,26 +5,16 @@ import TopBar from "../components/TopBar";
 import {cardEnvelop} from "../styles/extra.module.css";
 import CardGroup from "../components/CardGroup";
 import Card_2 from "../components/Card_Type";
-import { Button } from "react-bootstrap";
+import { Button, NavLink } from "react-bootstrap";
 
 
 const trashtext = "Simple sentence ta do effectssssss with impact a little bit bit bit ";
-
-/*const CardList = [
-    {title : "Classe de Produto 1",src : "/250x300.svg",  text : trashtext},
-    {title : "Classe de Produto 2",src : "/250x300.svg",  text : trashtext},
-    {title : "Classe de Produto 3",src : "/250x300.svg",  text : trashtext}
-]*/
-
-//const card = CardList[0];
-
-//<CardGroup List = {CardList}></CardGroup>
 
 
 //Getting pre cooked info from server
 export async function getStaticProps(){
   //requesting to api  
-  const res = await fetch('http://simplepure.vercel.app/api/hello');
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/hello`);
       
     //handling errors
       try {
@@ -50,13 +40,15 @@ export default function products({data}){
 
     function bt(){
       if (type!='') {
-        return <Button onClick = {()=>{setType('')}}>Voltar</Button>
+        return <Button>
+          <NavLink href="/">
+            Voltar
+          </NavLink>
+        </Button>
       }
     }
 
     function decide(){
-        const DysplayList = CardList.filter((card)=>(card.family==type)).map(product => ({title : product.name, text: product.price}));
-        console.log(DysplayList);
         if (type!='') {
             return(
                 <div className = {cardEnvelop}> 
