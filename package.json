@@ -19,6 +19,7 @@
     "react-bootstrap": "^1.5.2",
     "react-dom": "^18.2.0",
     "react-to-print": "^2.12.3",
-    "xlsx": "^0.16.9"
+    "xlsx": "^0.16.9",
+    "yarn": "^1.22.19"
   }
 }
