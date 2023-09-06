@@ -15,6 +15,8 @@ function jsWritter(List) {
 
 }
 
+//*
+//convert the excel sheet in a json format
 function readExcel() {
   const dirRelativeToPublicFolder = 'exelTest.xlsx';
   const dir = path.resolve('./public', dirRelativeToPublicFolder);
@@ -40,27 +42,49 @@ function readExcel() {
 
   return List;
 }
+/**/
 
 export default (req, res) => {
+  
+  //Capitalize the first letter of the string 
+  function regulate(name) {
+    
+    if(typeof(name)=="string"){
+      return name.charAt(0).toUpperCase() + name.slice(1)
+    }
+
+    return undefined;
+  }
+  
+  //getting params from request
+  const familyName = regulate(req.query.family);
+  
+  
   //jsWritter(readExcel());
   const dirRelativeToPublicFolder = 'dataBase.json';
 
   const dir = path.resolve('./public', dirRelativeToPublicFolder);
   const data = fs.readFileSync('./public/dataBase.json');
 
-  //const {List: rawList} = JSON.parse(data);
-
   const rawList  = readExcel();
   
   const List = rawList.map(({id, name, family,price})=>(
     {id,
-    family,
+    family : family,
     name : name.replace(family, '').trim(),
     price}
   ));
+  
 
-  res.statusCode = 200
-  res.json(List);
+  if(!familyName){
+    res.statusCode = 200
+    res.json(List);
+  }else{
+    const famList = List.filter(({family})=> family === familyName)
+    res.statusCode = 200
+    res.json(famList);
+  }
+  
 
   return;
 }
