@@ -1,11 +1,13 @@
-import { Button, Card } from "react-bootstrap";
+import { Button, Card, NavLink } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
 
-export default function Card_2({item, action}) {
-    const {text, title, src, id} = item;
+export default function Card_2({item}) {
+    const {price, title, src, id, type, family} = item;
+     
+    const toGoLink = (type == "product") ? `/products/item/${id}` : `/products/family/${title}`
     
     return(
         <Card style={{ width: '18rem', margin : '10px'}}>
@@ -13,11 +15,11 @@ export default function Card_2({item, action}) {
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>
-                {text}
+                {price}
                 </Card.Text>
 
-                <Button variant="primary" onClick={action}>
-                    <a href={`/products/${id}`}>Ver</a>
+                <Button variant="primary">
+                    <NavLink href={toGoLink}>Ver</NavLink>
                 </Button>
                 <a href="/products/gemology">click me</a>
                 
