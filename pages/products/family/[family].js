@@ -17,23 +17,42 @@ import cleanData from "../../../src/ProductsUtils";
 
 const trashtext = "Simple sentence ta do effectssssss with impact a little bit bit bit ";
 
-export async function getServerSideProps({params}){
-    //reading parameters
-    const {family} = params;
+export async function getStaticPaths(){
     
-    //Requesting data to the api
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/hello?family=${family}`);
-    const data = await res.json();
 
-    //cleaning data to send to the client
-    const sendable = cleanData(data)
+    //defining static paths
+     return {
+        paths:[
+            {
+                params : {
+                    family : "Gemology",    
+                },
+            }
+        ],
+        fallback : 'blocking',
+        
+    };
+}
+
+//props generator per path
+export async function getStaticProps(context) {
     
-    //sending to client
+    //data getter
+    async function requestFamily(family) {
+        //Requesting data to the api
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/hello?family=${family}`);
+        const data = await res.json();
+
+        //cleaning data to send to the client
+        return cleanData(data)
+    }
+
     return {
         props : {
-            data : sendable
+            data : await requestFamily(context.params.family)
         }
     };
+
 }
 
 export default function products({data}){

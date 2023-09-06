@@ -16,9 +16,20 @@ import cleanData from "../../../src/ProductsUtils";
 
 const trashtext = "Simple sentence ta do effectssssss with impact a little bit bit bit ";
 
-export async function getServerSideProps({params}){
+export async function getStaticPaths() {
+    return {
+        paths : [{
+            params : {
+                id : '20301'
+            }
+        }],
+        fallback : 'blocking'
+    }
+}
+
+export async function getStaticProps(context){
     //reading parameters
-    const {id} = params;
+    const id  = context.params.id;
     
     //Requesting data to the api
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/hello?id=${id}`);
