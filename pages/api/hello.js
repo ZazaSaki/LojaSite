@@ -58,7 +58,7 @@ export default (req, res) => {
   
   //getting params from request
   const familyName = regulate(req.query.family);
-  
+  const productId = regulate(req.query.id);
   
   //jsWritter(readExcel());
   const dirRelativeToPublicFolder = 'dataBase.json';
@@ -72,16 +72,24 @@ export default (req, res) => {
     {id,
     family : family,
     name : name.replace(family, '').trim(),
-    price}
+    price,
+    type: "product"}
   ));
   
 
+  if (!(!productId)) {
+    res.statusCode = 200;
+    const ProductList = List.filter(({id})=> id === productId);
+    res.json(ProductList);
+    return;
+  }
+
   if(!familyName){
-    res.statusCode = 200
+    res.statusCode = 200;
     res.json(List);
   }else{
-    const famList = List.filter(({family})=> family === familyName)
-    res.statusCode = 200
+    const famList = List.filter(({family})=> family === familyName);
+    res.statusCode = 200;
     res.json(famList);
   }
   
