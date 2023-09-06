@@ -67,8 +67,8 @@ export default (req, res) => {
   const dir = path.resolve('./data', dirRelativeToPublicFolder);
   const data = fs.readFileSync('./data/dataBase.json');
 
-  const rawList  = GenerateDataBase()
-  //readExcel();
+  const rawList  = readExcel();
+  fs.writeFileSync("./data/dataBase.json", data);
   
   const List = rawList.map(({id, name, family,price})=>(
     {id,

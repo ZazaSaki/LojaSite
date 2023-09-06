@@ -1,4 +1,4 @@
-const fs = require("fs");
+//const fs = require("fs");
 
 
 export default function jsWriter(List) {
@@ -7,6 +7,6 @@ export default function jsWriter(List) {
         List : List
     })
 
-    fs.writeFileSync("./data/dataBase.json", data);
+    //fs.writeFileSync("./data/dataBase.json", data);
 
 }
