@@ -1,20 +1,9 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import fs from "fs";
+//import fs from "fs";
 import path from "path";
 import xlsx from 'xlsx';
 //import jsWritter from "../../src/fileJsWriter";
 import {readExcel, GenerateDataBase} from "../../src/execelRd";
-
-function jsWritter(List) {
-    //const images = filenames.map(name => path.join('/', dirRelativeToPublicFolder, name))
-    const data = JSON.stringify({
-        total : List.length,
-        List
-    })
-
-    fs.writeFileSync("/temp/dataBase.json", data);
-
-}
 
 /*
 //convert the excel sheet in a json format
@@ -65,10 +54,9 @@ export default (req, res) => {
   const dirRelativeToPublicFolder = 'dataBase.json';
 
   const dir = path.resolve('./data', dirRelativeToPublicFolder);
-  const data = fs.readFileSync('./data/dataBase.json');
 
   const rawList  = readExcel();
-  fs.writeFileSync("./data/dataBase.json", data);
+  //fs.writeFileSync("./data/dataBase.json", data);
   
   const List = rawList.map(({id, name, family,price})=>(
     {id,
