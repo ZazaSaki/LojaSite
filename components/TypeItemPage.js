@@ -13,7 +13,7 @@ export default function TypeItemPage({CardList, action}){
             temp.push(card.family);
             console.log(card.family);
             const family = card.family ? card.family : 'Outros';
-            return {title: family, src:''};
+            return {title: family, src:'', id: family};
         }
     }).filter((card)=>(card));
 

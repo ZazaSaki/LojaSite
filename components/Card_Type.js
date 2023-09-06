@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function Card_2({item, action}) {
-    const {src, text, title} = item;
+    const {text, title, src, id} = item;
     
     return(
         <Card style={{ width: '18rem', margin : '10px'}}>
@@ -15,7 +15,11 @@ export default function Card_2({item, action}) {
                 <Card.Text>
                 {text}
                 </Card.Text>
-                <Button variant="primary" onClick={action}>ver</Button>
+
+                <Button variant="primary" onClick={action}>
+                    <a href={`/products/${id}`}>Ver</a>
+                </Button>
+                <a href="/products/gemology">click me</a>
                 
             </Card.Body>
         </Card>

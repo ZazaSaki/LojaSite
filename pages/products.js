@@ -20,8 +20,13 @@ const trashtext = "Simple sentence ta do effectssssss with impact a little bit b
 
 //<CardGroup List = {CardList}></CardGroup>
 
+
+//Getting pre cooked info from server
 export async function getStaticProps(){
-    const res = await fetch('http://simplepure.vercel.app/api/hello');
+  //requesting to api  
+  const res = await fetch('http://simplepure.vercel.app/api/hello');
+      
+    //handling errors
       try {
         const data = await res.json();
         return{
@@ -29,12 +34,16 @@ export async function getStaticProps(){
         }
       } catch (error) {
         const data = [];
+        
+        //sending answer to client
         return{
           props : {data: data}
         }
       }
 }
 
+
+//building page
 export default function products({data}){
     const CardList = data;
     const [type, setType] = useState('');
@@ -47,6 +56,7 @@ export default function products({data}){
 
     function decide(){
         const DysplayList = CardList.filter((card)=>(card.family==type)).map(product => ({title : product.name, text: product.price}));
+        console.log(DysplayList);
         if (type!='') {
             return(
                 <div className = {cardEnvelop}> 
