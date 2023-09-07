@@ -5,7 +5,7 @@ import extra from "../styles/extra.module.css";
 const sizeCarousel = "30vh";
 
 let PainelArray  = [
-    {src : "/logo.png", alt : "logo", title: "Simple Pure", text: "Salão de estica Natural"},
+    {src : "https://lh3.googleusercontent.com/drive-viewer/AITFw-yDXJzdse0E6SKVJJ3C9ZWh7G1syxlhSB5n3XZC_m2_HTSu9fF_FJbKs14NpmE8xEYvM-W_su1ykPo28ra4Sjfl4UM=w1366-h629", alt : "logo", title: "Simple Pure", text: "Salão de estica Natural"},
     {src : "/Painel1.png", alt : "painel", title: "Trate Por dentro o que se vê por fora", text: ""},
     {src : "/backGround.jpg", alt : "painel", title: "Trata Por dentro o que se vê por fora", text: ""},
     {src : "/Promo.jpg", alt : "painel", title: "1 Like  = 5% de Desconto", text: "Valido para qualquer tratamento"},
