@@ -1,6 +1,18 @@
 import { Carousel } from "react-bootstrap";
+import { Carousel as Car } from "antd";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import extra from "../styles/extra.module.css";
+
+import React from 'react';
+
+const contentStyle = {
+  margin: 0,
+  height: '160px',
+  color: '#fff',
+  lineHeight: '160px',
+  textAlign: 'center',
+  background: '#364d79',
+};
 
 const sizeCarousel = "30vh";
 
@@ -11,6 +23,7 @@ let PainelArray  = [
     {src : "/Promo.jpg", alt : "painel", title: "1 Like  = 5% de Desconto", text: "Valido para qualquer tratamento"},
 ]
 
+//decrepated
 function buildCrousel() {
     let i = 0;
     return PainelArray.map(item => (
@@ -32,10 +45,39 @@ function buildCrousel() {
     ));
 }
 
+function buildCar() {
+    let i = 0;
+
+    // item = {src, alt, title, text}
+    return PainelArray.map(item => (
+        <div key = {i++} className="carousel-Item">
+            
+            <div className={extra.carou}>
+               <img 
+                 /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+                 
+                 src={item.src}
+                 alt={item.alt}
+                /> 
+                <p><h3>{item.title}</h3></p>
+            </div>
+        </div>
+    ));
+}
+
+
+
+
 export default function FirtsPageCarousel(){
+    const onChange = (currentSlide) => {
+        console.log(currentSlide);
+      };
     return(
-        <Carousel>
-            {buildCrousel()}
-        </Carousel>
+        <div>            
+            <Car afterChange={onChange} autoplay = {true} autoplaySpeed={2000} className="carousel slide" effect="fade">
+                {buildCar()}
+            </Car>
+            
+        </div>
     );
 }
