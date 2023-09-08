@@ -7,7 +7,7 @@ const cardStyle = {
     boxShadow: 'none', // Remove box shadow
   };
 
-const MyCard = ({img_src, title, text, fontSize = '20px', flipped = false}) => {
+const MyCard = ({src, title, text, fontSize = '20px', flipped = false}) => {
   
     const img = ()=>(
         <Col span={8}>
@@ -22,9 +22,13 @@ const MyCard = ({img_src, title, text, fontSize = '20px', flipped = false}) => {
                 }}
             >
                 <img
-                src={img_src}
+                src={src}
                 alt="Image"
-                style={{ width: 'fill', height: 'auto' }}
+                style={{ 
+                    width: '100%', 
+                    height: '100%',
+                    objectFit : 'cover'
+                }}
                 />
             </div>
           </Col>
