@@ -36,7 +36,7 @@ const MyCard = ({img_src, title, text, fontSize = '20px', flipped = false}) => {
                 style={{
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: flipped ? 'flex-end' : 'start',
+                    justifyContent: flipped ? 'flex-start' : 'start',
                     alignItems: flipped ? 'flex-end' : 'flex-start', // Align text to the left
                     height: '100%',
                     padding : '5%',
