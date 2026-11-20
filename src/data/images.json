@@ -1,0 +1,20 @@
+{
+  "ritual": {
+    "src": "/images/ritual.webp",
+    "width": 1270,
+    "height": 760,
+    "blur": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABQBACdASoYAA4APu1iqU2ppaOiMAgBMB2JYwCw7Yvq1fs+wfJE6J84t/gQAP7r/1BXUZnJ6QkI/7/D1bNfq3K91ifeF+77bpW8AYH6ouWtv2og9G0LHIZIUg+Nfadd8CCXTsJBTBQNsilbgBN0jxsPsy2ZMUbly2kD95RvmDV9u3xtKJOSTjhbubmIQKZhcAA="
+  },
+  "promo": {
+    "src": "/images/promo.webp",
+    "width": 851,
+    "height": 315,
+    "blur": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBACdASoYAAkAPu1iqU2ppaOiMAgBMB2JaACdMoR4GdAE0RmYsk0IitsAAPsjSmVocPLWd5SjXvSmpr+YvyyAAN50Zrc4nzw4mIGc0eMqPBbB+c6Vglfscrw3Kw5+6ZZDo8WOgV2T7bY63edoq9dj7wXXR7m/SA0wgB3xVP84RKOYWaa7yra4AAA="
+  },
+  "mapa": {
+    "src": "/images/mapa.webp",
+    "width": 919,
+    "height": 460,
+    "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAwAwCdASoYAAwAPu1iqU2ppaOiMAgBMB2JaQAAesEt6hAAAP7wYVQilkwktGJEPcCzIOzRBNtqYdySAIe7zhAA"
+  }
+}

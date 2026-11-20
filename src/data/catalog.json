@@ -1,0 +1,1687 @@
+{
+  "source": "data/exelTest.xlsx — folha Produtos",
+  "total": 160,
+  "allVatIncluded": true,
+  "families": [
+    {
+      "name": "Gehwol",
+      "slug": "gehwol",
+      "count": 36,
+      "min": 6.8,
+      "max": 29.9
+    },
+    {
+      "name": "Gemology",
+      "slug": "gemology",
+      "count": 54,
+      "min": 20.2,
+      "max": 179.2
+    },
+    {
+      "name": "SkinClinic",
+      "slug": "skinclinic",
+      "count": 21,
+      "min": 10.2,
+      "max": 56.9
+    },
+    {
+      "name": "Mossi Epil",
+      "slug": "mossi-epil",
+      "count": 6,
+      "min": 7.7,
+      "max": 22
+    },
+    {
+      "name": "Yellow Rose",
+      "slug": "yellow-rose",
+      "count": 5,
+      "min": 35.6,
+      "max": 50
+    },
+    {
+      "name": "Maquilhagem",
+      "slug": "maquilhagem",
+      "count": 19,
+      "min": 18.1,
+      "max": 119.8
+    },
+    {
+      "name": "Outros",
+      "slug": "outros",
+      "count": 19,
+      "min": 4.9,
+      "max": 48
+    }
+  ],
+  "products": [
+    {
+      "id": "20101",
+      "name": "Gehwol med Sensitive",
+      "shortName": "med Sensitive",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 25.6,
+      "ean": "4013474107263",
+      "vatIncluded": true
+    },
+    {
+      "id": "20102",
+      "name": "Gehwol Protective Nail and Skin Cream",
+      "shortName": "Protective Nail and Skin Cream",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 15.6,
+      "ean": "4013474117132",
+      "vatIncluded": true
+    },
+    {
+      "id": "20103",
+      "name": "Gehwol Fluid",
+      "shortName": "Fluid",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 11.7,
+      "ean": "4013474111123",
+      "vatIncluded": true
+    },
+    {
+      "id": "20104",
+      "name": "Gehwol Fusskraft Soft Feet Nourishing Bath",
+      "shortName": "Fusskraft Soft Feet Nourishing Bath",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 21.9,
+      "ean": "4013474101421",
+      "vatIncluded": true
+    },
+    {
+      "id": "20105",
+      "name": "Gehwol Fusskraft Soft Feet Peeling",
+      "shortName": "Fusskraft Soft Feet Peeling",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 8.2,
+      "ean": "4013474101377",
+      "vatIncluded": true
+    },
+    {
+      "id": "20106",
+      "name": "Gehwol Fusskraft Soft Feet Butter",
+      "shortName": "Fusskraft Soft Feet Butter",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 7,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20107",
+      "name": "Gehwol Fusskraft spray protector de unhas e pele dos pes",
+      "shortName": "Fusskraft spray protector de unhas e pele dos pes",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 12.4,
+      "ean": "4013474111048",
+      "vatIncluded": true
+    },
+    {
+      "id": "20108",
+      "name": "Gehwol Fusskraft Blue",
+      "shortName": "Fusskraft Blue",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 16.9,
+      "ean": "4013474111130",
+      "vatIncluded": true
+    },
+    {
+      "id": "20109",
+      "name": "Gehwol Fusskraft Grun",
+      "shortName": "Fusskraft Grun",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 16.9,
+      "ean": "4013474101131",
+      "vatIncluded": true
+    },
+    {
+      "id": "20110",
+      "name": "Gehwol Fusskraft Leg Vitality",
+      "shortName": "Fusskraft Leg Vitality",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 18.5,
+      "ean": "4013474111154",
+      "vatIncluded": true
+    },
+    {
+      "id": "20111",
+      "name": "Gehwol Fusskraft Rot",
+      "shortName": "Fusskraft Rot",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 16.9,
+      "ean": "4013474101216",
+      "vatIncluded": true
+    },
+    {
+      "id": "20112",
+      "name": "Gehwol Fusskraft Warming Bath Concentrate",
+      "shortName": "Fusskraft Warming Bath Concentrate",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 28.2,
+      "ean": "4013474111086",
+      "vatIncluded": true
+    },
+    {
+      "id": "20113",
+      "name": "Gehwol Fusskraft Herbal Bath",
+      "shortName": "Fusskraft Herbal Bath",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 15.1,
+      "ean": "4013474111055",
+      "vatIncluded": true
+    },
+    {
+      "id": "20114",
+      "name": "Gehwol Fusskraft Herbal Lotion",
+      "shortName": "Fusskraft Herbal Lotion",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 17.9,
+      "ean": "4013474111062",
+      "vatIncluded": true
+    },
+    {
+      "id": "20115",
+      "name": "Gehwol med Protective Nail and Skin Oil",
+      "shortName": "med Protective Nail and Skin Oil",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 16.96,
+      "ean": "4013474117071",
+      "vatIncluded": true
+    },
+    {
+      "id": "20116",
+      "name": "Gehwol med Nail Softner",
+      "shortName": "med Nail Softner",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 13.1,
+      "ean": "4013474117194",
+      "vatIncluded": true
+    },
+    {
+      "id": "20117",
+      "name": "Gehwol med Foot Powder",
+      "shortName": "med Foot Powder",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 19.17,
+      "ean": "4013474117248",
+      "vatIncluded": true
+    },
+    {
+      "id": "20118",
+      "name": "Gehwol med Salve for Cracked Skin",
+      "shortName": "med Salve for Cracked Skin",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 19.9,
+      "ean": "4013474117019",
+      "vatIncluded": true
+    },
+    {
+      "id": "20119",
+      "name": "Gehwol Foot Bath",
+      "shortName": "Foot Bath",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 15.9,
+      "ean": "4013474113400",
+      "vatIncluded": true
+    },
+    {
+      "id": "20120",
+      "name": "Gehwol Warming Balm",
+      "shortName": "Warming Balm",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 10,
+      "ean": "4013474113059",
+      "vatIncluded": true
+    },
+    {
+      "id": "20121",
+      "name": "Gehwol Refreshing Balm",
+      "shortName": "Refreshing Balm",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 10,
+      "ean": "4013474113325",
+      "vatIncluded": true
+    },
+    {
+      "id": "20122",
+      "name": "Gehwol med Express foam",
+      "shortName": "med Express foam",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 6.8,
+      "ean": "4013474107317",
+      "vatIncluded": true
+    },
+    {
+      "id": "20123",
+      "name": "Gehwol Carring Foot Spray",
+      "shortName": "Carring Foot Spray",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 17.8,
+      "ean": "4013474101285",
+      "vatIncluded": true
+    },
+    {
+      "id": "20124",
+      "name": "Gehwol Sotf Feet Butter Roma e Moringa",
+      "shortName": "Sotf Feet Butter Roma e Moringa",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 27.9,
+      "ean": "4013474101469",
+      "vatIncluded": true
+    },
+    {
+      "id": "20125",
+      "name": "Gehwol Anel de silicone S",
+      "shortName": "Anel de silicone S",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 13.9,
+      "ean": "4013474116470",
+      "vatIncluded": true
+    },
+    {
+      "id": "20126",
+      "name": "Gehwol Anel de silicone M",
+      "shortName": "Anel de silicone M",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 15.4,
+      "ean": "4013474116487",
+      "vatIncluded": true
+    },
+    {
+      "id": "20127",
+      "name": "Gehwol Anel de silicone L",
+      "shortName": "Anel de silicone L",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 18.1,
+      "ean": "4013474116494",
+      "vatIncluded": true
+    },
+    {
+      "id": "20128",
+      "name": "Gehwol Capa Silicone para dedo medio",
+      "shortName": "Capa Silicone para dedo medio",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 21.5,
+      "ean": "4013474116395",
+      "vatIncluded": true
+    },
+    {
+      "id": "20129",
+      "name": "Gehwol Almofada Joanete do 5º dedo",
+      "shortName": "Almofada Joanete do 5º dedo",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 13.5,
+      "ean": "4013474116579",
+      "vatIncluded": true
+    },
+    {
+      "id": "20130",
+      "name": "Gehwol Almofada Joanete Halux",
+      "shortName": "Almofada Joanete Halux",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 16.5,
+      "ean": "4013474116371",
+      "vatIncluded": true
+    },
+    {
+      "id": "20131",
+      "name": "Gehwol Almofada Metatarsal",
+      "shortName": "Almofada Metatarsal",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 29.9,
+      "ean": "4013474116500",
+      "vatIncluded": true
+    },
+    {
+      "id": "20132",
+      "name": "Gehwol Divsor de Dedo Halux",
+      "shortName": "Divsor de Dedo Halux",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 13.9,
+      "ean": "4013474116517",
+      "vatIncluded": true
+    },
+    {
+      "id": "20133",
+      "name": "Gehwol Dedeira de Tecido/Gel",
+      "shortName": "Dedeira de Tecido/Gel",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 12.5,
+      "ean": "4013474116319",
+      "vatIncluded": true
+    },
+    {
+      "id": "20201",
+      "name": "Geralsan Creme de Mãos 40ml",
+      "shortName": "Geralsan Creme de Mãos 40ml",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 7.8,
+      "ean": "4013474200117",
+      "vatIncluded": true
+    },
+    {
+      "id": "20202",
+      "name": "Geralsan Desodorizante",
+      "shortName": "Geralsan Desodorizante",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 15,
+      "ean": "4013474200032",
+      "vatIncluded": true
+    },
+    {
+      "id": "20203",
+      "name": "Geralsan Creme de Mãos 75ml",
+      "shortName": "Geralsan Creme de Mãos 75ml",
+      "family": "Gehwol",
+      "familySlug": "gehwol",
+      "price": 14.8,
+      "ean": "4013474210086",
+      "vatIncluded": true
+    },
+    {
+      "id": "20301",
+      "name": "Gemology Oleo de Diamante",
+      "shortName": "Oleo de Diamante",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 46.8,
+      "ean": "3760153133662",
+      "vatIncluded": true
+    },
+    {
+      "id": "20302",
+      "name": "Gemology Oleo de Ambar Azul",
+      "shortName": "Oleo de Ambar Azul",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 46.8,
+      "ean": "3760153133648",
+      "vatIncluded": true
+    },
+    {
+      "id": "20303",
+      "name": "Gemology Oleo de Opala",
+      "shortName": "Oleo de Opala",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 46.8,
+      "ean": "3760153133655",
+      "vatIncluded": true
+    },
+    {
+      "id": "20304",
+      "name": "Gemology Perfume de Diamante",
+      "shortName": "Perfume de Diamante",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 88.4,
+      "ean": "3760153133464",
+      "vatIncluded": true
+    },
+    {
+      "id": "20305",
+      "name": "Gemology Perfume de Ambar Azul",
+      "shortName": "Perfume de Ambar Azul",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 88.4,
+      "ean": "3760153133488",
+      "vatIncluded": true
+    },
+    {
+      "id": "20306",
+      "name": "Gemology Perfume de Opala",
+      "shortName": "Perfume de Opala",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 88.4,
+      "ean": "3760153133471",
+      "vatIncluded": true
+    },
+    {
+      "id": "20307",
+      "name": "Gemology Caresse de diamant",
+      "shortName": "Caresse de diamant",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 38,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20308",
+      "name": "Gemology Creme de Safira e Rubi",
+      "shortName": "Creme de Safira e Rubi",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 54.7,
+      "ean": "3760153132108",
+      "vatIncluded": true
+    },
+    {
+      "id": "20309",
+      "name": "Gemology Leite de Corpo Ambar Azul",
+      "shortName": "Leite de Corpo Ambar Azul",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 38,
+      "ean": "3760153131996",
+      "vatIncluded": true
+    },
+    {
+      "id": "20310",
+      "name": "Gemology Creme de Perola Branca",
+      "shortName": "Creme de Perola Branca",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 84.4,
+      "ean": "3760153133495",
+      "vatIncluded": true
+    },
+    {
+      "id": "20311",
+      "name": "Gemology Creme Jeunesse Diamant",
+      "shortName": "Creme Jeunesse Diamant",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 179.2,
+      "ean": "3760153130128",
+      "vatIncluded": true
+    },
+    {
+      "id": "20312",
+      "name": "Gemology Concentrado de Malachite",
+      "shortName": "Concentrado de Malachite",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 54.1,
+      "ean": "3760153131217",
+      "vatIncluded": true
+    },
+    {
+      "id": "20313",
+      "name": "Gemology Concentrado de Peridot",
+      "shortName": "Concentrado de Peridot",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 59.1,
+      "ean": "3760153131231",
+      "vatIncluded": true
+    },
+    {
+      "id": "20314",
+      "name": "Gemology Concentrado de Smithsonite",
+      "shortName": "Concentrado de Smithsonite",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 54.1,
+      "ean": "3760153131194",
+      "vatIncluded": true
+    },
+    {
+      "id": "20315",
+      "name": "Gemology Contorno de Olhos",
+      "shortName": "Contorno de Olhos",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 65.1,
+      "ean": "3760153131255",
+      "vatIncluded": true
+    },
+    {
+      "id": "20316",
+      "name": "Gemology Desmaquilhante de Malachite Waterproof",
+      "shortName": "Desmaquilhante de Malachite Waterproof",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 33.2,
+      "ean": "3760153130401",
+      "vatIncluded": true
+    },
+    {
+      "id": "20317",
+      "name": "Gemology Loção Facial de Safira",
+      "shortName": "Loção Facial de Safira",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 35.5,
+      "ean": "3760153130722",
+      "vatIncluded": true
+    },
+    {
+      "id": "20318",
+      "name": "Gemology Mousse de Roche 30ml",
+      "shortName": "Mousse de Roche 30ml",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 35.5,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20319",
+      "name": "Gemology Gel de Banho Safira 200ml",
+      "shortName": "Gel de Banho Safira 200ml",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 27,
+      "ean": "3760153133259",
+      "vatIncluded": true
+    },
+    {
+      "id": "20320",
+      "name": "Gemology Leite de Corpo Parure de Soi",
+      "shortName": "Leite de Corpo Parure de Soi",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 64,
+      "ean": "3760153133389",
+      "vatIncluded": true
+    },
+    {
+      "id": "20321",
+      "name": "Gemology Oleo de Corpo La Precieuse",
+      "shortName": "Oleo de Corpo La Precieuse",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 69,
+      "ean": "3760153130166",
+      "vatIncluded": true
+    },
+    {
+      "id": "20322",
+      "name": "Gemology Loção Facial de Quartz Rose",
+      "shortName": "Loção Facial de Quartz Rose",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 30.1,
+      "ean": "3760153130029",
+      "vatIncluded": true
+    },
+    {
+      "id": "20323",
+      "name": "Gemology Desmaquilhante Bijou Nacre",
+      "shortName": "Desmaquilhante Bijou Nacre",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 30.1,
+      "ean": "3760153130012",
+      "vatIncluded": true
+    },
+    {
+      "id": "20324",
+      "name": "Gemology Mousse de Roche 150ml",
+      "shortName": "Mousse de Roche 150ml",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 35,
+      "ean": "3760153130043",
+      "vatIncluded": true
+    },
+    {
+      "id": "20325",
+      "name": "Gemology Loção Purificante de Rubi",
+      "shortName": "Loção Purificante de Rubi",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 30.1,
+      "ean": "3760153133747",
+      "vatIncluded": true
+    },
+    {
+      "id": "20326",
+      "name": "Gemology Creme de Predra da Lua",
+      "shortName": "Creme de Predra da Lua",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 65.1,
+      "ean": "3760153131415",
+      "vatIncluded": true
+    },
+    {
+      "id": "20327",
+      "name": "Gemology Creme de Opala",
+      "shortName": "Creme de Opala",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 65.1,
+      "ean": "3760153131392",
+      "vatIncluded": true
+    },
+    {
+      "id": "20328",
+      "name": "Gemology Creme de Smithsonite",
+      "shortName": "Creme de Smithsonite",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 65.1,
+      "ean": "3760153131408",
+      "vatIncluded": true
+    },
+    {
+      "id": "20329",
+      "name": "Gemology Creme de Safira",
+      "shortName": "Creme de Safira",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 79.9,
+      "ean": "3760153130111",
+      "vatIncluded": true
+    },
+    {
+      "id": "20330",
+      "name": "Gemology Creme Facial de Ambar Azul",
+      "shortName": "Creme Facial de Ambar Azul",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 44.3,
+      "ean": "3760153132276",
+      "vatIncluded": true
+    },
+    {
+      "id": "20331",
+      "name": "Gemology Gel de Limpesa de Ambar Azul",
+      "shortName": "Gel de Limpesa de Ambar Azul",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 31.9,
+      "ean": "3760153132306",
+      "vatIncluded": true
+    },
+    {
+      "id": "20332",
+      "name": "Gemology Kit Viagem Bijou + Quartz",
+      "shortName": "Kit Viagem Bijou + Quartz",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 20.6,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20333",
+      "name": "Gemology Kit Viagem Limpeza facial + tratamento",
+      "shortName": "Kit Viagem Limpeza facial + tratamento",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 60.7,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20334",
+      "name": "Gemology Kit Viagem Mousse de Roche + Creme Pierre de Lune",
+      "shortName": "Kit Viagem Mousse de Roche + Creme Pierre de Lune",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 30.3,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20335",
+      "name": "Gemology Kit Gel de Duche + Leite Parure Soi",
+      "shortName": "Kit Gel de Duche + Leite Parure Soi",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 80,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20336",
+      "name": "Masque Jeunesse Diamant",
+      "shortName": "Masque Jeunesse Diamant",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 73.9,
+      "ean": "3760153132153",
+      "vatIncluded": true
+    },
+    {
+      "id": "20337",
+      "name": "Peeling Ambar Azul",
+      "shortName": "Peeling Ambar Azul",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 31.9,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20338",
+      "name": "Concentrado de Ametista",
+      "shortName": "Concentrado de Ametista",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 59.1,
+      "ean": "3760153132214",
+      "vatIncluded": true
+    },
+    {
+      "id": "20339",
+      "name": "Perle de Tendresse",
+      "shortName": "Perle de Tendresse",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 30.1,
+      "ean": "3760153130050",
+      "vatIncluded": true
+    },
+    {
+      "id": "20340",
+      "name": "Creme 15ml Pierre de Lune",
+      "shortName": "Creme 15ml Pierre de Lune",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 20.3,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20341",
+      "name": "Creme 15ml Opala",
+      "shortName": "Creme 15ml Opala",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 20.3,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20342",
+      "name": "Creme 15ml Rubi e safira",
+      "shortName": "Creme 15ml Rubi e safira",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 24.8,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20343",
+      "name": "Creme 15ml Perle Blanche",
+      "shortName": "Creme 15ml Perle Blanche",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 20.2,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20344",
+      "name": "Creme 15ml Diamante",
+      "shortName": "Creme 15ml Diamante",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 53.6,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20345",
+      "name": "Delice Peridote",
+      "shortName": "Delice Peridote",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 59.1,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20346",
+      "name": "Leite de Corpo de Diamante",
+      "shortName": "Leite de Corpo de Diamante",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 38,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20347",
+      "name": "Kit Leite de Corpo de Diamante + Gel de Duche",
+      "shortName": "Kit Leite de Corpo de Diamante + Gel de Duche",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 65,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20348",
+      "name": "Kit Bijou + Creme Perle Blanche",
+      "shortName": "Kit Bijou + Creme Perle Blanche",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 36.2,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20349",
+      "name": "Kit Mousse de Roche + Creme Safira e Rubi",
+      "shortName": "Kit Mousse de Roche + Creme Safira e Rubi",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 34.8,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20350",
+      "name": "Creme Jade",
+      "shortName": "Creme Jade",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 79.9,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20351",
+      "name": "Creme Rubi",
+      "shortName": "Creme Rubi",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 79.9,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20352",
+      "name": "Creme Pérola branca SPF30 PA+++",
+      "shortName": "Creme Pérola branca SPF30 PA+++",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 84.4,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20353",
+      "name": "Corretor Pérola Branca SPF 15 PA++",
+      "shortName": "Corretor Pérola Branca SPF 15 PA++",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 44.2,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20354",
+      "name": "Serum Pérola Branca",
+      "shortName": "Serum Pérola Branca",
+      "family": "Gemology",
+      "familySlug": "gemology",
+      "price": 60.7,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20401",
+      "name": "SkinClinic Protetor Solar 50+",
+      "shortName": "Protetor Solar 50+",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 27.7,
+      "ean": "8436542252492",
+      "vatIncluded": true
+    },
+    {
+      "id": "20402",
+      "name": "SkinClinic Protetor Solar 50+ Color",
+      "shortName": "Protetor Solar 50+ Color",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 26.7,
+      "ean": "8436542250412",
+      "vatIncluded": true
+    },
+    {
+      "id": "20403",
+      "name": "SkinClinic Silica Gel Scrub 60ml",
+      "shortName": "Silica Gel Scrub 60ml",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 18,
+      "ean": "8436542252508",
+      "vatIncluded": true
+    },
+    {
+      "id": "20404",
+      "name": "SkinClinic Silica Gel Scrub 200ml",
+      "shortName": "Silica Gel Scrub 200ml",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 25.5,
+      "ean": "8436542250429",
+      "vatIncluded": true
+    },
+    {
+      "id": "20405",
+      "name": "SkinClinic Leite de Limpesa",
+      "shortName": "Leite de Limpesa",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 15,
+      "ean": "8436542250436",
+      "vatIncluded": true
+    },
+    {
+      "id": "20406",
+      "name": "SkinClinic Creme Glicolico Efeito Peeling",
+      "shortName": "Creme Glicolico Efeito Peeling",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 26.7,
+      "ean": "8436542250313",
+      "vatIncluded": true
+    },
+    {
+      "id": "20407",
+      "name": "SkinClinic Melanyc Eyes",
+      "shortName": "Melanyc Eyes",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 35,
+      "ean": "8436542252102",
+      "vatIncluded": true
+    },
+    {
+      "id": "20408",
+      "name": "SkinClinic Hidrogel Cuidado Dermico",
+      "shortName": "Hidrogel Cuidado Dermico",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 10.2,
+      "ean": "8436542250535",
+      "vatIncluded": true
+    },
+    {
+      "id": "20409",
+      "name": "SkinClinic Rosanic Cream",
+      "shortName": "Rosanic Cream",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 42.45,
+      "ean": "8436542253383",
+      "vatIncluded": true
+    },
+    {
+      "id": "20410",
+      "name": "SkinClinic Creme Recuperador",
+      "shortName": "Creme Recuperador",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 18.5,
+      "ean": "8436542250306",
+      "vatIncluded": true
+    },
+    {
+      "id": "20411",
+      "name": "SkinClinic Creme Anticelulitico Redutor",
+      "shortName": "Creme Anticelulitico Redutor",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 26.7,
+      "ean": "8436542252454",
+      "vatIncluded": true
+    },
+    {
+      "id": "20412",
+      "name": "SkinClinic Creme Reafirmante",
+      "shortName": "Creme Reafirmante",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 40.1,
+      "ean": "8436542251198",
+      "vatIncluded": true
+    },
+    {
+      "id": "20413",
+      "name": "SkinClinic Tonico Facial",
+      "shortName": "Tonico Facial",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 15,
+      "ean": "8436542250450",
+      "vatIncluded": true
+    },
+    {
+      "id": "20414",
+      "name": "SkinClinic Creme Anti-Idade",
+      "shortName": "Creme Anti-Idade",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 39.5,
+      "ean": "8436542250207",
+      "vatIncluded": true
+    },
+    {
+      "id": "20415",
+      "name": "SkinClinic Creme M",
+      "shortName": "Creme M",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 44.9,
+      "ean": "8436542250214",
+      "vatIncluded": true
+    },
+    {
+      "id": "20416",
+      "name": "SkinClinic Melaninic Daily",
+      "shortName": "Melaninic Daily",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 56.9,
+      "ean": "8436542250870",
+      "vatIncluded": true
+    },
+    {
+      "id": "20417",
+      "name": "SkinClinic Lifting",
+      "shortName": "Lifting",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 41,
+      "ean": "8436542250238",
+      "vatIncluded": true
+    },
+    {
+      "id": "20418",
+      "name": "SkinClinic Espuma de Limpesa",
+      "shortName": "Espuma de Limpesa",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 22,
+      "ean": "8436542252911",
+      "vatIncluded": true
+    },
+    {
+      "id": "20419",
+      "name": "SkinClinic Anti-Esterias",
+      "shortName": "Anti-Esterias",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 42,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20420",
+      "name": "SkinClinic Gel Reafirmante Rosto",
+      "shortName": "Gel Reafirmante Rosto",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 32,
+      "ean": "8436542250603",
+      "vatIncluded": true
+    },
+    {
+      "id": "20421",
+      "name": "SkinClinic Coralip",
+      "shortName": "Coralip",
+      "family": "SkinClinic",
+      "familySlug": "skinclinic",
+      "price": 16,
+      "ean": "8436542254922",
+      "vatIncluded": true
+    },
+    {
+      "id": "20501",
+      "name": "Mossi Epil Gel Redutor",
+      "shortName": "Gel Redutor",
+      "family": "Mossi Epil",
+      "familySlug": "mossi-epil",
+      "price": 22,
+      "ean": "2000527123457",
+      "vatIncluded": true
+    },
+    {
+      "id": "20502",
+      "name": "Mossi Epil Gel Desfatigante",
+      "shortName": "Gel Desfatigante",
+      "family": "Mossi Epil",
+      "familySlug": "mossi-epil",
+      "price": 16,
+      "ean": "2000466123457",
+      "vatIncluded": true
+    },
+    {
+      "id": "20503",
+      "name": "Mossi Epil Creme de Mãos",
+      "shortName": "Creme de Mãos",
+      "family": "Mossi Epil",
+      "familySlug": "mossi-epil",
+      "price": 7.7,
+      "ean": "MELVCM75",
+      "vatIncluded": true
+    },
+    {
+      "id": "20504",
+      "name": "Mossi Epil Gel Aloe Vera 99%",
+      "shortName": "Gel Aloe Vera 99%",
+      "family": "Mossi Epil",
+      "familySlug": "mossi-epil",
+      "price": 9.2,
+      "ean": "1243712345758",
+      "vatIncluded": true
+    },
+    {
+      "id": "20505",
+      "name": "Mossi Epil Emulsão Retardadora do Pelo",
+      "shortName": "Emulsão Retardadora do Pelo",
+      "family": "Mossi Epil",
+      "familySlug": "mossi-epil",
+      "price": 15.2,
+      "ean": "2015051410102",
+      "vatIncluded": true
+    },
+    {
+      "id": "20506",
+      "name": "Mossi Epil Espuma Retardadora do Pelo",
+      "shortName": "Espuma Retardadora do Pelo",
+      "family": "Mossi Epil",
+      "familySlug": "mossi-epil",
+      "price": 19.2,
+      "ean": "1050612345678",
+      "vatIncluded": true
+    },
+    {
+      "id": "20507",
+      "name": "Alcool Gel 100ml c/ Eucalipto",
+      "shortName": "Alcool Gel 100ml c/ Eucalipto",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 8,
+      "ean": "2020042200006",
+      "vatIncluded": true
+    },
+    {
+      "id": "20601",
+      "name": "Yellow Rose Sun Care Cream Rosto SPF +20",
+      "shortName": "Sun Care Cream Rosto SPF +20",
+      "family": "Yellow Rose",
+      "familySlug": "yellow-rose",
+      "price": 40,
+      "ean": "5213001330815",
+      "vatIncluded": true
+    },
+    {
+      "id": "20602",
+      "name": "Yellow Rose Huile Solaire SPF +6",
+      "shortName": "Huile Solaire SPF +6",
+      "family": "Yellow Rose",
+      "familySlug": "yellow-rose",
+      "price": 42,
+      "ean": "5213001334776",
+      "vatIncluded": true
+    },
+    {
+      "id": "20603",
+      "name": "Yellow Rose Sun Screen Emulsion SPF +15",
+      "shortName": "Sun Screen Emulsion SPF +15",
+      "family": "Yellow Rose",
+      "familySlug": "yellow-rose",
+      "price": 44,
+      "ean": "5213001332987",
+      "vatIncluded": true
+    },
+    {
+      "id": "20604",
+      "name": "Yellow Rose Sun Care Emulsion SPF +30",
+      "shortName": "Sun Care Emulsion SPF +30",
+      "family": "Yellow Rose",
+      "familySlug": "yellow-rose",
+      "price": 50,
+      "ean": "5213001335674",
+      "vatIncluded": true
+    },
+    {
+      "id": "20605",
+      "name": "Yellow Rose Clear Spot Serum",
+      "shortName": "Clear Spot Serum",
+      "family": "Yellow Rose",
+      "familySlug": "yellow-rose",
+      "price": 35.6,
+      "ean": "5213001331553",
+      "vatIncluded": true
+    },
+    {
+      "id": "20701",
+      "name": "Lapiz Olhos",
+      "shortName": "Lapiz Olhos",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 21,
+      "ean": "8023603128201",
+      "vatIncluded": true
+    },
+    {
+      "id": "20702",
+      "name": "Base Compacta 514",
+      "shortName": "Base Compacta 514",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 37.8,
+      "ean": "8023603112071",
+      "vatIncluded": true
+    },
+    {
+      "id": "20703",
+      "name": "Base Compacta 512",
+      "shortName": "Base Compacta 512",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 37.8,
+      "ean": "8023603112057",
+      "vatIncluded": true
+    },
+    {
+      "id": "20704",
+      "name": "Sombra Celestial",
+      "shortName": "Sombra Celestial",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 30,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20705",
+      "name": "Batom Longa Duração 717",
+      "shortName": "Batom Longa Duração 717",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 27.5,
+      "ean": "8023603117175",
+      "vatIncluded": true
+    },
+    {
+      "id": "20706",
+      "name": "Mask Pestanas Aquaproof Lilas",
+      "shortName": "Mask Pestanas Aquaproof Lilas",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 25.7,
+      "ean": "8023603105127",
+      "vatIncluded": true
+    },
+    {
+      "id": "20707",
+      "name": "Mask Pestanas Aquaproof Verde",
+      "shortName": "Mask Pestanas Aquaproof Verde",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 25.7,
+      "ean": "8023603105110",
+      "vatIncluded": true
+    },
+    {
+      "id": "20708",
+      "name": "Mask Pestanas Aquaproof Preto",
+      "shortName": "Mask Pestanas Aquaproof Preto",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 25.7,
+      "ean": "8023603105097",
+      "vatIncluded": true
+    },
+    {
+      "id": "20709",
+      "name": "Mask Pestanas Color Vibar Verde",
+      "shortName": "Mask Pestanas Color Vibar Verde",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 22.9,
+      "ean": "8023603105202",
+      "vatIncluded": true
+    },
+    {
+      "id": "20710",
+      "name": "Mask Pestanas Color Vibar Azul",
+      "shortName": "Mask Pestanas Color Vibar Azul",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 22.9,
+      "ean": "8023603105226",
+      "vatIncluded": true
+    },
+    {
+      "id": "20711",
+      "name": "Li Lash",
+      "shortName": "Li Lash",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 119.8,
+      "ean": "8435340704004",
+      "vatIncluded": true
+    },
+    {
+      "id": "20712",
+      "name": "Lash gel 500",
+      "shortName": "Lash gel 500",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 25.7,
+      "ean": "8016887000097",
+      "vatIncluded": true
+    },
+    {
+      "id": "20713",
+      "name": "Smokeye ex 4 Cores",
+      "shortName": "Smokeye ex 4 Cores",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 49.8,
+      "ean": "8023603103987",
+      "vatIncluded": true
+    },
+    {
+      "id": "20714",
+      "name": "Eye Primer",
+      "shortName": "Eye Primer",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 25.9,
+      "ean": "8023603130952",
+      "vatIncluded": true
+    },
+    {
+      "id": "20715",
+      "name": "Lapiz Labios 767",
+      "shortName": "Lapiz Labios 767",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 18.1,
+      "ean": "8023603127679",
+      "vatIncluded": true
+    },
+    {
+      "id": "20716",
+      "name": "Lapiz Labios 766",
+      "shortName": "Lapiz Labios 766",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 18.1,
+      "ean": "8023603127662",
+      "vatIncluded": true
+    },
+    {
+      "id": "20717",
+      "name": "Batom Rebel Mat Lipstick 55",
+      "shortName": "Batom Rebel Mat Lipstick 55",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 27.9,
+      "ean": "8023603115553",
+      "vatIncluded": true
+    },
+    {
+      "id": "20718",
+      "name": "Batom Rebel Mat Lipstick 54",
+      "shortName": "Batom Rebel Mat Lipstick 54",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 27.9,
+      "ean": "8023603115546",
+      "vatIncluded": true
+    },
+    {
+      "id": "20719",
+      "name": "Batom Chuby Mat Lipstick 28/29",
+      "shortName": "Batom Chuby Mat Lipstick 28/29",
+      "family": "Maquilhagem",
+      "familySlug": "maquilhagem",
+      "price": 21.9,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20720",
+      "name": "Expression Fibres Naturelles Chocolate Brown",
+      "shortName": "Expression Fibres Naturelles Chocolate Brown",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 30,
+      "ean": null,
+      "vatIncluded": true
+    },
+    {
+      "id": "20723",
+      "name": "Cx2 Ampola Flash Vitamina C",
+      "shortName": "Cx2 Ampola Flash Vitamina C",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 12,
+      "ean": "8437010380822",
+      "vatIncluded": true
+    },
+    {
+      "id": "20901",
+      "name": "Dr.Organic Organic Tea Tree",
+      "shortName": "Dr.Organic Organic Tea Tree",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 13.5,
+      "ean": "5060176671836",
+      "vatIncluded": true
+    },
+    {
+      "id": "20902",
+      "name": "Pure Vegetal Huile de Millepertuis",
+      "shortName": "Pure Vegetal Huile de Millepertuis",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 23.5,
+      "ean": "3559480315922",
+      "vatIncluded": true
+    },
+    {
+      "id": "20903",
+      "name": "Skeyndor Gel Corretor de Imperfeicoes",
+      "shortName": "Skeyndor Gel Corretor de Imperfeicoes",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 4.95,
+      "ean": "8436001982212",
+      "vatIncluded": true
+    },
+    {
+      "id": "20904",
+      "name": "Andreia Valomo Peeling de Sal Marinho",
+      "shortName": "Andreia Valomo Peeling de Sal Marinho",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 48,
+      "ean": "5600834290209",
+      "vatIncluded": true
+    },
+    {
+      "id": "20905",
+      "name": "Yogi Tea Rooibos",
+      "shortName": "Yogi Tea Rooibos",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 4.9,
+      "ean": "4012824400245",
+      "vatIncluded": true
+    },
+    {
+      "id": "20906",
+      "name": "Yogi Tea Classic",
+      "shortName": "Yogi Tea Classic",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 4.9,
+      "ean": "4012824400047",
+      "vatIncluded": true
+    },
+    {
+      "id": "20907",
+      "name": "Yogi Tea Relax",
+      "shortName": "Yogi Tea Relax",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 4.9,
+      "ean": "4012824401150",
+      "vatIncluded": true
+    },
+    {
+      "id": "20908",
+      "name": "Yogi Tea Jengibre e Limao",
+      "shortName": "Yogi Tea Jengibre e Limao",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 4.9,
+      "ean": "4012824401334",
+      "vatIncluded": true
+    },
+    {
+      "id": "20909",
+      "name": "Tiger Balm White",
+      "shortName": "Tiger Balm White",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 9.5,
+      "ean": "8888650403356",
+      "vatIncluded": true
+    },
+    {
+      "id": "20910",
+      "name": "Tiger Balm Red",
+      "shortName": "Tiger Balm Red",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 9.5,
+      "ean": "8888650404346",
+      "vatIncluded": true
+    },
+    {
+      "id": "20911",
+      "name": "Otosan Spray Ouvido",
+      "shortName": "Otosan Spray Ouvido",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 12,
+      "ean": "8016887000097",
+      "vatIncluded": true
+    },
+    {
+      "id": "20912",
+      "name": "Otosan Spray Garganta",
+      "shortName": "Otosan Spray Garganta",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 13.4,
+      "ean": "8016887000189",
+      "vatIncluded": true
+    },
+    {
+      "id": "20913",
+      "name": "Otosan Cone para Ouvidos",
+      "shortName": "Otosan Cone para Ouvidos",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 20,
+      "ean": "6309831",
+      "vatIncluded": true
+    },
+    {
+      "id": "20914",
+      "name": "Solgar Magnesium Citrate",
+      "shortName": "Solgar Magnesium Citrate",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 13.5,
+      "ean": "033984017108",
+      "vatIncluded": true
+    },
+    {
+      "id": "20915",
+      "name": "MT RollerDermo Roller",
+      "shortName": "MT RollerDermo Roller",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 40,
+      "ean": "6927743228956",
+      "vatIncluded": true
+    },
+    {
+      "id": "20916",
+      "name": "Regcarga Dermo Roller",
+      "shortName": "Regcarga Dermo Roller",
+      "family": "Outros",
+      "familySlug": "outros",
+      "price": 9,
+      "ean": null,
+      "vatIncluded": true
+    }
+  ],
+  "sheets": {
+    "serviceGroups": [
+      "Serviço A PURE BEM ESTAR",
+      "Serviço B PURE ESTÉTICA",
+      "Serviço C PURE EPIL",
+      "Serviço D PURE PEDI/ MANI",
+      "Outros Serviços"
+    ],
+    "itemFamilies": [
+      "PURE RITUAL",
+      "PURE MASSAGE",
+      "PURE FACE",
+      "PURE BOBY",
+      "PURE EPIL",
+      "PURE FOTOTERAPI",
+      "PURE MANICURE",
+      "PURE BELL",
+      "PURE THERAPYS",
+      "PURE MEDPEDICURE",
+      "Gemology",
+      "Yellow Rose",
+      "Mossi Epil",
+      "SkinClinic",
+      "Maquilhagem",
+      "Bem Estar",
+      "Produtos",
+      "Gehwol"
+    ]
+  }
+}
