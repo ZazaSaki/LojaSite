@@ -1,38 +1,22 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-//import fs, { readFile } from "fs";
-import path from "path";
-import { pathToFileURL } from "url";
-import excel from 'xlsx';
+import { useEffect } from "react";
+import * as XLSX from 'xlsx';
+import { parseSheet } from "../../src/parseSheet";
 
-export default function FileReader({file}) {
-    if(!file){
-        return (<div></div>);
-    }
-    
-    const dirRelativeToPublicFolder = 'exelTest.xlsx'
+// Reads an excel file selected in the browser
+export default function FileReader({file, onLoad}) {
+    useEffect(() => {
+        if (!file) return;
+        let cancelled = false;
 
-    const dir = path.resolve('./public', dirRelativeToPublicFolder);
+        file.arrayBuffer().then((buf) => {
+            if (cancelled) return;
+            const wb = XLSX.read(buf);
+            const List = parseSheet(wb.Sheets['Produtos']);
+            if (onLoad) onLoad(List);
+        }).catch((e) => console.error('could not read excel file', e));
 
-    const wb = excel.readFile(file);
-    const ws = wb.Sheets['Produtos'];
-    let List = []
-    const cell1 = ws['L10'];
-    const cell2 = ws['A10'];
-    let i=5;
-    
-    function cell(letter){
-
-        if(ws[letter+i]) return ws[letter+i].v;
-        return null
-    }
-
-    do {
-        
-        List.push({id:cell('A'), name: cell('C'), family : cell('B'), price : cell('L').toFixed(2)+"€"});
-        i = i+1;
-    } while (cell('A'));
-
-    console.log(List);
+        return () => { cancelled = true; };
+    }, [file, onLoad]);
 
     return (<div></div>);
 }

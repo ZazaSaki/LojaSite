@@ -16,16 +16,9 @@ export default function CardListComp({CardList, setCardId, Num, toImpress, curre
     let TempList = [];
 
     function hidden(val) {
-        console.log({val, Num, ret :(Num==0)? false : val != parseInt(Num)});
         return (CardList.length < groupSize+1)? false : val != parseInt(Num);
     }
     
-    function showCardListEditor(){
-        
-        return CardList.map((card, index)=>
-            (<Button variant={()=>((currentId==index)? "success":"danger")} onClick={()=>{setCardId(index);}} key={index} ><Etiqueta List={card.list}></Etiqueta></Button>))
-    }
-
     function showCardList(){
         let i = 0;
         
@@ -33,7 +26,6 @@ export default function CardListComp({CardList, setCardId, Num, toImpress, curre
         CardList.map((card,mainIndex)=>{
             
             const index = i++;
-            console.log({mainIndex});
             TempList.push(<Button variant={(currentId==mainIndex)? "danger":"primary"} onClick={()=>{setCardId(mainIndex);}} key={i} ><Etiqueta List={card.list}></Etiqueta></Button>);
 
             //checking groupSize = is the group full?
@@ -51,15 +43,12 @@ export default function CardListComp({CardList, setCardId, Num, toImpress, curre
         //generating jsx
         const final = list.map(({group, hidden}, mainIndex)=>{
             let mainCounter = 0;
-            console.log({hidden, mainIndex});
             return(<div key = {"group" + mainIndex} hidden={hidden}>
                 {group.map((card)=>{
                     
                     return (card) })}
             </div>)
         });
-
-        console.log(list);
 
         return final;
     }

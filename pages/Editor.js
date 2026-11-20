@@ -1,41 +1,24 @@
-
-import 'bootstrap/dist/css/bootstrap.min.css';  
 import EditorApp from "../components/EditorApp/EditorApp";
 import React, {useRef, useState} from 'react';
-import ReactToPrint from 'react-to-print';
-import CardListComp from '../components/CardList/CardList';
-
-
+import { useReactToPrint } from 'react-to-print';
+import readProducts from "../src/DataUtils";
 
 export async function getStaticProps(){
-  const res = await fetch('http://simplepure.vercel.app/api/hello');
-    try {
-      const data = await res.json();
-      return{
-        props : {data: data}
-      }
-    } catch (error) {
-      const data = [];
-      return{
-        props : {data: data}
-      }
-    }
-    
-    
+  return {
+    props : { data: readProducts() }
+  };
 }
 
-export default function products({data}){
-    
+export default function Editor({data}){
     const [CardList, setCardList] = useState([]);
-   
-    const componentRef = useRef();
-    
+    const componentRef = useRef(null);
+    const handlePrint = useReactToPrint({ contentRef: componentRef });
+
   return (
     <div>
-      <ReactToPrint
-        trigger={() => (<button>Print this out!</button>)}
-        content={() => componentRef.current}
-      />
-        <EditorApp data={data} CardList={CardList} setCardList={setCardList} ref={componentRef} />
-      </div>);
+      <button onClick={() => handlePrint()}>Print this out!</button>
+      <div ref={componentRef}>
+        <EditorApp data={data} CardList={CardList} setCardList={setCardList} />
+      </div>
+    </div>);
 }

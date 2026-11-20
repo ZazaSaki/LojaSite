@@ -1,18 +1,16 @@
 import React, { useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
 
-
 export default function Printer({ComponentToPrint}) {
-    const componentRef = useRef();
-    const handlePrint = useReactToPrint({
-          content: () => componentRef.current,
-        });
-      
+    const componentRef = useRef(null);
+    const handlePrint = useReactToPrint({ contentRef: componentRef });
+
     return (
         <div>
-            <ComponentToPrint ref={componentRef} />
-            <button onClick={handlePrint}>Print this out!</button>
-          </div>
+            <div ref={componentRef}>
+                <ComponentToPrint />
+            </div>
+            <button onClick={() => handlePrint()}>Print this out!</button>
+        </div>
     );
-
 }

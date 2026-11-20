@@ -1,77 +1,44 @@
-//main in«mport
-import { useRouter } from "next/router";
+import { Button } from "react-bootstrap";
 
-import {NavLink} from "react-bootstrap";
-
-
-import TypeItemPage from "../../../components/TypeItemPage";
-import 'bootstrap/dist/css/bootstrap.min.css'; 
-import { useState } from "react";
 import TopBar from "../../../components/TopBar";
-import {cardEnvelop} from "../../../styles/extra.module.css";
+import styles from "../../../styles/extra.module.css";
 import CardGroup from "../../../components/CardGroup";
 import Card_2 from "../../../components/Card_Type";
-import { Button } from "react-bootstrap";
-import cleanData from "../../../src/ProductsUtils";
-
-
-const trashtext = "Simple sentence ta do effectssssss with impact a little bit bit bit ";
+import readProducts from "../../../src/DataUtils";
+import cleanData, { regulate, filterByFamily } from "../../../src/ProductsUtils";
 
 export async function getStaticPaths(){
-    
+    //pre-render every family found in the excel file
+    const families = [...new Set(readProducts().map(({family}) => family || 'Outros'))];
 
-    //defining static paths
-     return {
-        paths:[
-            {
-                params : {
-                    family : "Gemology",    
-                },
-            }
-        ],
+    return {
+        paths: families.map(family => ({ params : { family } })),
         fallback : 'blocking',
-        
     };
 }
 
 //props generator per path
 export async function getStaticProps(context) {
-    
-    //data getter
-    async function requestFamily(family) {
-        //Requesting data to the api
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/hello?family=${family}`);
-        const data = await res.json();
+    const family = regulate(context.params.family);
+    const data = cleanData(filterByFamily(readProducts(), family));
 
-        //cleaning data to send to the client
-        return cleanData(data)
+    if (data.length === 0) {
+        return { notFound: true };
     }
 
     return {
-        props : {
-            data : await requestFamily(context.params.family)
-        }
+        props : { data, family }
     };
-
 }
 
-export default function products({data}){
-    //reading params
-    const router = useRouter();
-    const family = router.query.family;
-
+export default function Family({data, family}){
     //building page
     return(<div>
             <TopBar></TopBar>
-            <Button>
-                <NavLink href = "/products">
-                    Voltar
-                </NavLink>
-            </Button>
-            id = {family}
-            <div className = {cardEnvelop}> 
-                    <CardGroup className='container' List = {data} Card = {Card_2}></CardGroup>
+            <Button href="/products" style={{margin: '10px'}}>Voltar</Button>
+            <h2 style={{marginLeft: '50px'}}>{family}</h2>
+            <div className = {styles.cardEnvelop}>
+                    <CardGroup List = {data} Card = {Card_2}></CardGroup>
             </div>
-            
         </div>);
 }

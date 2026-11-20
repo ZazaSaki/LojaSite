@@ -1,71 +1,43 @@
-import { useRouter } from "next/router";
-
-import {NavLink} from "react-bootstrap";
-
-
-import TypeItemPage from "../../../components/TypeItemPage";
-import 'bootstrap/dist/css/bootstrap.min.css'; 
-import { useState } from "react";
-import TopBar from "../../../components/TopBar";
-import {cardEnvelop} from "../../../styles/extra.module.css";
-import CardGroup from "../../../components/CardGroup";
-import Card_2 from "../../../components/Card_Type";
 import { Button } from "react-bootstrap";
+
+import TopBar from "../../../components/TopBar";
+import readProducts from "../../../src/DataUtils";
 import cleanData from "../../../src/ProductsUtils";
-
-
-const trashtext = "Simple sentence ta do effectssssss with impact a little bit bit bit ";
 
 export async function getStaticPaths() {
     return {
-        paths : [{
-            params : {
-                id : '20301'
-            }
-        }],
+        paths : [{ params : { id : '20301' } }],
         fallback : 'blocking'
     }
 }
 
 export async function getStaticProps(context){
     //reading parameters
-    const id  = context.params.id;
-    
-    //Requesting data to the api
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/hello?id=${id}`);
-    const data = await res.json();
+    const id = String(context.params.id);
 
-    //cleaning data to send to the client
-    const sendable = cleanData(data)
-    
-    //sending to client
+    const data = cleanData(readProducts().filter(product => product.id === id));
+
+    if (data.length === 0) {
+        return { notFound: true };
+    }
+
     return {
-        props : {
-            data : sendable
-        }
+        props : { data: data[0] }
     };
 }
 
-export default function products({data}){
-    //reading params
-    const router = useRouter();
-    const id = router.query.id;
-
-    const {src, title, price, text} = data[0];
+export default function Product({data}){
+    const {id, title, price, family} = data;
 
     //building page
     return(<div>
             <TopBar></TopBar>
-            <Button>
-                <NavLink href = "/products">
-                    Voltar
-                </NavLink>
-            </Button>
-            id = {id}
-            title = {title}
-            price = {price}
-            
-            
-            
+            <Button href={family ? `/products/family/${family}` : "/products"} style={{margin: '10px'}}>Voltar</Button>
+            <div style={{margin: '50px'}}>
+                <h2>{title}</h2>
+                <p>{family}</p>
+                <h4>{price}</h4>
+                <small>Ref. {id}</small>
+            </div>
         </div>);
 }

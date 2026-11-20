@@ -1,6 +1,4 @@
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState , useRef, Component} from "react";
+import React, { Component } from "react";
 
 import { Button, FormControl, InputGroup, Form } from "react-bootstrap";
 import SearchList from '../SearchList/SearchList';
@@ -11,7 +9,7 @@ import CheckBoxGroup from "../checkBoxGroup/checkBoxGroup";
 
 
 
-export default class products extends Component{
+export default class EditorApp extends Component{
 
 
     constructor(props){
@@ -77,7 +75,7 @@ export default class products extends Component{
     }
 
     searchList = () => {
-        const list = this.props.data.filter(({name, family})=>(name.toLowerCase().includes(this.state.search.trim().toLowerCase())));
+        const list = (this.props.data || []).filter(({name})=>(String(name).toLowerCase().includes(this.state.search.trim().toLowerCase())));
         return(<SearchList list={list} action={this.newProduct} active={this.state.search.length>0}></SearchList>);
     }
 
@@ -106,26 +104,15 @@ export default class products extends Component{
     topbarMenu = () =>{
         return(
             <InputGroup>
-                <InputGroup.Prepend>
-                    <InputGroup.Text>Procurar {this.state.test}</InputGroup.Text>
-                </InputGroup.Prepend>
+                <InputGroup.Text>Procurar {this.state.test}</InputGroup.Text>
                 
                 <FormControl aria-describedby="basic-addon1" onChange= {(e)=>this.setSearch(e.target.value)}/>
                 
-                <InputGroup.Prepend>
-                    <Button variant="outline-secondary" onClick={()=>{this.newCard()}}>Nova Etiqueta</Button>
-                    <Button variant="outline-secondary" onClick={()=>{this.deleteCard()}}>Apagar Etiqueta</Button>
-                    <Button variant="outline-secondary" onClick={()=>{this.popProduct()}}>Apagar Produto</Button>
-                    <Button variant="outline-secondary" onClick={()=>{this.print()}}>Orientação</Button>
-                    
-                </InputGroup.Prepend>
-                <Form.File id="formcheck-api-custom" custom>
-                    <Form.File.Input isValid type="file" onChange={(e)=>{this.setState({file : e.target.files[0]});console.log(e.target.files[0]);}}/>
-                    <Form.File.Label data-browse="Button text">
-                        Custom file input
-                    </Form.File.Label>
-                    <Form.Control.Feedback type="valid">You did it!</Form.Control.Feedback>
-                </Form.File>
+                <Button variant="outline-secondary" onClick={()=>{this.newCard()}}>Nova Etiqueta</Button>
+                <Button variant="outline-secondary" onClick={()=>{this.deleteCard()}}>Apagar Etiqueta</Button>
+                <Button variant="outline-secondary" onClick={()=>{this.popProduct()}}>Apagar Produto</Button>
+                <Button variant="outline-secondary" onClick={()=>{this.print()}}>Orientação</Button>
+                <Form.Control id="formcheck-api-custom" type="file" accept=".xlsx,.xls" onChange={(e)=>{this.setState({file : e.target.files[0]});}}/>
             </InputGroup>);
 
             
@@ -133,7 +120,6 @@ export default class products extends Component{
 
     //console.log(data);
     render(){ 
-        console.log(this.props.data);
         return(<div>
         <div>
             {this.topbarMenu()}

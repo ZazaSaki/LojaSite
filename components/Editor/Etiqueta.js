@@ -1,4 +1,6 @@
-import {quadro, logo, name, price, table, td, h3} from "../../styles/etiqueta.module.css";
+import styles from "../../styles/etiqueta.module.css";
+
+const {quadro, logo, name, price, table, td, h3} = styles;
 
 
 
@@ -26,30 +28,31 @@ export default function Etiqueta({List, title}){
         return List;
     }
 
-    console.log(getTitle());
-
     return(
         <div className = {quadro}>
 
             <table className = {table}>
+                <tbody>
                 <tr>
                     <th className = {td}>
-                        <img className={logo} src = "logo.png"/>
+                        <img className={logo} src = "/logo.png" alt="logo"/>
                     </th>
                     <th className = {td}>
                         <h3 className = {h3}>{getTitle()}</h3>
                     </th>
                 </tr>
+                </tbody>
             </table>
             <table className = {table}>
                 
-                {getList().map(product => (
-                    <tr key = {product.name}>
+                <tbody>
+                {getList().map((product, index) => (
+                    <tr key = {product.id ?? index}>
                         <td className = {name}>{product.name}</td>
                         <td className = {price}><input style = {{border : "0px", width : "55px", fontWeight : "bold"}}defaultValue = {product.price}/></td>
                     </tr>
                 ))}
-                
+                </tbody>
             </table>
         </div>
 );

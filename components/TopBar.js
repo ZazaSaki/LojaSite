@@ -1,15 +1,14 @@
-import { Navbar, Nav, Form, FormControl, Button, NavDropdown, Image } from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav, NavDropdown, Image, Container } from "react-bootstrap";
 
-
-export default function TopBar(req,res){
+export default function TopBar(){
     return(
         <Navbar bg="light" expand="lg">
-            <Image src = "/logo.png" width="75" height = "75"></Image>
+            <Container fluid>
+            <Image src = "/logo.png" width="75" height = "75" alt="Simple Pure"></Image>
             <Navbar.Brand href="/">Simple Pure (site em desenvolvimento)</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
+            <Nav className="me-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="#promo">Promoções</Nav.Link>
                 <Nav.Link href="/services">Serviços</Nav.Link>
@@ -23,8 +22,8 @@ export default function TopBar(req,res){
                 <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                 </NavDropdown>
             </Nav>
-            
             </Navbar.Collapse>
+            </Container>
         </Navbar>
     );
 }

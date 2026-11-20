@@ -1,16 +1,13 @@
 import { useState } from "react";
-import { readExcel } from "../src/execelRd";
 
-
-
-export default function upload(){
+export default function Upload(){
     const [file, setFile] = useState(null);
-    
+
     async function uploadFile(e){
         e.preventDefault();
-        
+        if (!file || !file[0]) return;
+
         const only = file[0];
-        readExcel(file);
         const form = new FormData();
         form.append('file', only, only.name);
 
@@ -19,13 +16,8 @@ export default function upload(){
                 method : 'post',
                 body: form
             });
-
-            console.log('request',req);
-
-            //const res = await req.json();
-            //console.log(res);
-            //console.log('reasponse', res);
-
+            const res = await req.json();
+            if (!res.ok) alert('upload failed');
         } catch (e) {
             alert('upload failed');
         }
@@ -38,6 +30,5 @@ export default function upload(){
             <input type="submit" value="Upload"/>
             </form>
         </div>
-        
     );
 }

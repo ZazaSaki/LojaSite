@@ -1,25 +1,22 @@
-export default function readExcel() {
-    const dirRelativeToPublicFolder = 'exelTest.xlsx';
-    const dir = path.resolve('./public', dirRelativeToPublicFolder);
-  
-    const wb = xlsx.readFile(dir);
-    const ws = wb.Sheets['Produtos'];
-    let List = []
-    const cell1 = ws['L10'];
-    const cell2 = ws['A10'];
-    let i=5;
-    
-    function cell(letter){
-  
-        if(ws[letter+i]) return ws[letter+i].v;
-        return null
-    }
-  
-    do {
-        
-        List.push({id:cell('A'), name: cell('C'), family : cell('B'), price : cell('L').toFixed(2)+"€"});
-        i = i+1;
-    } while (cell('A'));
-  
-    return List;
-  }
+// Server-only helper: reads the product sheet from public/exelTest.xlsx.
+// Used by the API route and by getStaticProps (never import it in client code).
+import fs from "fs";
+import path from "path";
+import * as XLSX from "xlsx";
+import { parseSheet } from "./parseSheet";
+
+XLSX.set_fs(fs);
+
+const EXCEL_FILE = path.join(process.cwd(), "public", "exelTest.xlsx");
+
+// Read every product from the excel file, already cleaned up
+export default function readProducts() {
+  const wb = XLSX.readFile(EXCEL_FILE);
+  return parseSheet(wb.Sheets["Produtos"]).map(({ id, name, family, price }) => ({
+    id,
+    family,
+    name: family ? String(name).replace(family, "").trim() : String(name).trim(),
+    price,
+    type: "product",
+  }));
+}
