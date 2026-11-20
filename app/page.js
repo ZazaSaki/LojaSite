@@ -120,6 +120,7 @@ export default function Home() {
                 <FamilyCard key={family.slug} family={family} />
               ))}
             </div>
+            <img src="/ornament.svg" alt="" aria-hidden="true" className="mx-auto mt-16 h-10 w-auto" />
           </Reveal>
         </div>
       </section>

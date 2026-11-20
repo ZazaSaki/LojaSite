@@ -20,6 +20,7 @@ const sansFont = localFont({
 export const metadata = {
   title: 'Simple Pure — O seu ritual SPA',
   description: 'Spa e cosmética natural em Castelo Branco',
+  icons: { icon: '/favicon.ico' },
 };
 
 export default function RootLayout({ children }) {
