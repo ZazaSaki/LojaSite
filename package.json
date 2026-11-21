@@ -10,6 +10,7 @@
     "prebuild": "node scripts/extract-catalog.mjs",
     "build": "next build",
     "preview": "serve out -l 3005",
+    "start": "serve out -l 3005",
     "typecheck": "tsc --noEmit",
     "verify": "node scripts/verify-catalog.mjs && tsc --noEmit",
     "audit": "node scripts/verify-catalog.mjs && node scripts/audit-content.mjs && node scripts/audit-links.mjs && tsc --noEmit"

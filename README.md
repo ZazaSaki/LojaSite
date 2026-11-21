@@ -12,10 +12,12 @@ Requires **Node.js 20.9+** and **npm** (do not use Yarn, pnpm or Bun).
 npm install
 npm run dev       # development server at http://localhost:3005
 npm run build     # static export into out/
-npm run preview   # serve out/ at http://localhost:3005
+npm run preview   # serve out/ at http://localhost:3005 (same as npm start)
 npm run verify    # data integrity checks + TypeScript
 npm run audit     # after a build: verify + content reconciliation + link/asset check
 ```
+
+The exported site must be served over HTTP (`npm start`, or any static host). Opening `out/index.html` directly from disk (`file://`) shows an unstyled page, because Next.js uses absolute `/_next/...` asset paths. `next start` does not work with `output: "export"`.
 
 `npm run dev` and `npm run build` first run `npm run data`, which regenerates the catalogue from the spreadsheet.
 
