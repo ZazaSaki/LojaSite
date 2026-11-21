@@ -98,6 +98,20 @@ Typos fixed in labels (product names were **not** changed): `estica` → `estét
 - The old `public/dataBase.json` (145 rows, removed) was an outdated snapshot that the old site never read; it read the spreadsheet. Seven of its prices (20312, 20314, 20317, 20318, 20332, 20333, 20334) and two names differ from the spreadsheet. The site uses the spreadsheet.
 - No product photos exist, so each product gets an abstract, family-coloured label tile instead of a fake photo.
 
+## Legal information (Portugal)
+
+Legal content lives in **`src/content/legal.ts`**. It is shown in the footer of every page and on `/informacao-legal/`, `/politica-de-privacidade/` and `/politica-de-cookies/`.
+
+| Requirement | Where |
+|---|---|
+| Provider identification: name, address, email, public registration, NIF (DL 7/2004, art. 10.º) | Footer "Identificação" + `/informacao-legal/` |
+| Livro de Reclamações Eletrónico link, "em local visível e de forma destacada" (DL 156/2005, art. 5.º-B n.º 2, added by DL 74/2017) | Footer badge on every page + `/informacao-legal/` |
+| Consumer ADR / RAL entity (Lei 144/2015, art. 18.º; Lei 63/2019) | Footer + `/informacao-legal/`: CNIACC, which covers the Castelo Branco district. The EU ODR platform was discontinued on 20 July 2025 (Reg. (UE) 2024/3228) and is not linked |
+| Privacy notice (RGPD arts. 13–14, Lei 58/2019) | `/politica-de-privacidade/` |
+| Cookies (Lei 41/2004, art. 5.º, as amended by Lei 46/2012) | `/politica-de-cookies/`. The site sets no cookies and makes no third-party requests on load (fonts and images are self-hosted). The Google Maps iframe loads only after an explicit two-step consent ("Carregar mapa interativo" → "Aceitar e carregar mapa"), which is not remembered |
+
+**Before publishing, fill in every `[INSERIR …]` placeholder in `src/content/legal.ts`.** Placeholders are highlighted on the site, and `npm run audit` lists any that remain. If the business has joined a different consumer arbitration centre, update `ral` there as well.
+
 ## Images
 
 Source photos are in `assets/source/`. `npm run images` (sharp) regenerates:

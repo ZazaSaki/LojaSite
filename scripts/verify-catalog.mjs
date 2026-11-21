@@ -42,7 +42,7 @@ if (fs.existsSync(out)) {
     if (!fs.existsSync(file)) fail(`missing page ${path.relative(root, file)}`);
     else pages++;
   }
-  for (const route of ["index.html", "services/index.html", "products/index.html", "promocoes/index.html", "about/index.html", "404.html"]) {
+  for (const route of ["index.html", "services/index.html", "products/index.html", "promocoes/index.html", "about/index.html", "informacao-legal/index.html", "politica-de-privacidade/index.html", "politica-de-cookies/index.html", "404.html"]) {
     if (!fs.existsSync(path.join(out, route))) fail(`missing page out/${route}`);
     else pages++;
   }

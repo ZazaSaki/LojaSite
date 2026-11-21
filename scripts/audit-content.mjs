@@ -66,8 +66,23 @@ const mapsId = "0xd3d5fcd85a13457:0x886599f94585994b";
 const aboutRaw = html("about/index.html");
 row("Localização: morada", 1, about.includes("Av. Nuno Álvares 27 loja 1") && about.includes("6000-083 Castelo Branco") ? 1 : 0);
 row("Localização: link Google Maps", 1, aboutRaw.includes(mapsId) ? 1 : 0);
-const all = execSync(`grep -rhoiE "hor[áa]rio|telefone|tel\\.|telem[óo]vel|[a-z0-9._-]+@[a-z0-9-]+\\.[a-z]+" ${out} --include=*.html || true`).toString().trim();
-row("Horário / telefone / email", 0, all ? all.split("\n").length : 0, "não existem nos dados originais; nada inventado");
+// Contact details: none exist in the source data, so the site must show no real
+// phone number, email address or opening hours (only "[INSERIR …]" placeholders).
+const pages = [];
+(function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); e.isDirectory() ? walk(p) : p.endsWith(".html") && pages.push(path.relative(out, p)); } })(out);
+const allText = pages.map(visible).join(" ");
+const emails = allText.match(/[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z.]{2,}/gi) ?? [];
+const phones = allText.match(/(?:\+351\s?)?\b[29]\d{2}\s?\d{3}\s?\d{3}\b/g) ?? [];
+const hours = allText.match(/\b\d{1,2}(?:h\d{2}|:\d{2})\b/g) ?? [];
+row("Horário / telefone / email reais", 0, emails.length + phones.length + hours.length, "não existem nos dados originais; só marcadores [INSERIR …]");
+
+// Legal information (DL 7/2004 art. 10.º, DL 156/2005 art. 5.º-B, Lei 144/2015 art. 18.º)
+const footerPages = pages.filter((p) => !p.startsWith("_"));
+const withLre = footerPages.filter((p) => html(p).includes('href="https://www.livroreclamacoes.pt"')).length;
+row("Páginas com ligação ao Livro de Reclamações", footerPages.length, withLre);
+const withRal = footerPages.filter((p) => html(p).includes("https://www.cniacc.pt")).length;
+row("Páginas com aviso RAL (CNIACC)", footerPages.length, withRal);
+const placeholders = [...new Set(allText.match(/\[INSERIR[^\]]*\]/g) ?? [])];
 
 /* Legacy snapshot public/dataBase.json (145 rows, older than the spreadsheet) */
 try {
@@ -79,5 +94,11 @@ try {
 } catch { /* main branch not available */ }
 
 console.table(rows.map((r) => ({ Categoria: r.category, "Original Count": r.original, "New Site Count": r.site, Notas: r.note })));
+if (placeholders.length) {
+  console.warn(`⚠ ${placeholders.length} marcador(es) por preencher (src/content/legal.ts):`);
+  for (const p of placeholders) console.warn("   " + p);
+}
+if (withLre !== footerPages.length) problems.push("Livro de Reclamações link missing on some pages");
+if (withRal !== footerPages.length) problems.push("RAL notice missing on some pages");
 if (problems.length) { console.error("✗ " + problems.join("\n✗ ")); process.exit(1); }
 console.log("✓ reconciliação sem diferenças");

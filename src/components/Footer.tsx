@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { brand, location, nav, promo } from "@/content/site";
+import { brand, location, nav } from "@/content/site";
+import { company, legalNav, ral } from "@/content/legal";
+import { LegalValue, LivroReclamacoesBadge } from "./Legal";
 import { families } from "@/lib/catalog";
 import FacetMark from "./FacetMark";
 
@@ -63,13 +65,65 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container-calm relative flex flex-col gap-3 border-t border-linen/10 py-8 text-xs text-linen/45 sm:flex-row sm:items-center sm:justify-between">
+      {/* Legal information: DL 7/2004 art. 10.º, DL 156/2005 art. 5.º-B, Lei 144/2015 art. 18.º */}
+      <div className="container-calm relative grid gap-10 border-t border-linen/10 py-12 text-sm text-linen/70 md:grid-cols-12">
+        <div className="md:col-span-5">
+          <p className="eyebrow text-linen/50">Identificação</p>
+          <dl className="mt-4 space-y-1.5">
+            {[
+              ["Nome comercial", company.tradeName],
+              ["Denominação social", company.legalName],
+              ["NIF/NIPC", company.nif],
+              ["Morada", company.address],
+              ["Email", company.email],
+              ["Telefone", company.phone],
+            ].map(([k, v]) => (
+              <div key={k} className="flex flex-wrap gap-x-2">
+                <dt className="text-linen/45">{k}:</dt>
+                <dd>
+                  <LegalValue value={v} />
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+        <div className="md:col-span-3">
+          <p className="eyebrow text-linen/50">Reclamações</p>
+          <div className="mt-4">
+            <LivroReclamacoesBadge />
+          </div>
+        </div>
+        <div className="md:col-span-4">
+          <p className="eyebrow text-linen/50">Resolução alternativa de litígios</p>
+          <p className="mt-4 leading-relaxed">
+            Em caso de litígio de consumo, o consumidor pode recorrer ao{" "}
+            <a href={ral.url} target="_blank" rel="noopener noreferrer" className="text-amber-soft underline-offset-4 hover:underline">
+              CNIACC – Centro Nacional de Informação e Arbitragem de Conflitos de Consumo
+            </a>{" "}
+            (www.cniacc.pt). Mais informações no{" "}
+            <a href={ral.consumerPortal} target="_blank" rel="noopener noreferrer" className="text-amber-soft underline-offset-4 hover:underline">
+              Portal do Consumidor
+            </a>
+            .
+          </p>
+        </div>
+      </div>
+
+      <div className="container-calm relative flex flex-col gap-4 border-t border-linen/10 py-8 text-xs text-linen/45 sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {new Date().getFullYear()} {brand.name} · {location.city}
         </p>
-        <Link href="/promocoes/" className="hover:text-linen/80">
-          {promo.title}
-        </Link>
+        <nav aria-label="Informação legal">
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            {legalNav.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="hover:text-linen/85">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </footer>
   );
